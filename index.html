@@ -342,7 +342,7 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 .slide.active svg.ic{stroke-dasharray:160;animation:traca 1.4s cubic-bezier(.55,0,.25,1) backwards;animation-delay:calc(var(--d,0s) + .2s)}
 @keyframes traca{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
 /* filme de transformação: o texto entra quando a transformação está acabando */
-.slide[data-fundo^="filme"].active .r{animation-delay:calc(var(--d,0s) + 1.5s)}
+.slide[data-fundo^="filme"].active .r{animation-delay:calc(var(--d,0s) + .8s)}
 
 /* ===========================================================
    SÓ NO TELÃO — .telao-only aparece na apresentação e no PDF de ensaio;
@@ -860,7 +860,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   </div>
 </section>
 
-<section class="slide" data-fundo="cena:boom" data-section="Trajetória" data-station="11/15" data-title="BOOM">
+<section class="slide" data-fundo="cena:boom" data-vel="1.6" data-section="Trajetória" data-station="11/15" data-title="BOOM">
   <div class="glow g-c"></div>
   <div class="frame l-stmt center">
     <div class="h-xxl r">BOOM.</div>
@@ -2674,20 +2674,22 @@ const fPosters=[]; // carrega as imagens paradas já na abertura: servem de rese
 slides.forEach(s=>{const f=fundoDe(s);if(!f)return;s.style.setProperty('--poster',`url("${f.jpg}")`);const im=new Image();im.src=f.jpg;fPosters.push(im)});
 function fundoImagem(src){++fPedido;fImg.src=src;fImg.classList.add('on');fVid.forEach(v=>v.classList.remove('on'))}
 function fundoSome(){++fPedido;fImg.classList.remove('on');fVid.forEach(v=>{v.classList.remove('on')})}
-function fundoToca(src,poster){
+function fundoToca(src,poster,vel){
   const pedido=++fPedido;const v=fVid[fVez=1-fVez],velho=fVid[1-fVez];
   const mostra=()=>{if(pedido!==fPedido)return;v.classList.add('on');velho.classList.remove('on');fImg.classList.remove('on');setTimeout(()=>{if(!velho.classList.contains('on'))velho.pause()},700)};
   v.onerror=()=>{if(pedido===fPedido&&poster)fundoImagem(poster)};
-  const vai=()=>{if(pedido!==fPedido)return;v.currentTime=0;v.play().then(mostra,()=>{if(pedido===fPedido&&poster)fundoImagem(poster)})};
+  const vai=()=>{if(pedido!==fPedido)return;v.currentTime=0;v.defaultPlaybackRate=v.playbackRate=vel||1;v.play().then(mostra,()=>{if(pedido===fPedido&&poster)fundoImagem(poster)})};
   if(v.getAttribute('src')!==src){v.src=src;v.addEventListener('loadeddata',vai,{once:true});v.load()}else if(v.readyState>=2)vai();else v.addEventListener('loadeddata',vai,{once:true});
 }
 function fundoPara(de,para){
   if(PRESENTER)return;
   const a=fundoDe(slides[para]),b=de==null?null:fundoDe(slides[de]);
-  if(de!=null&&para===de-1&&b&&b.tipo==='filme'){fundoToca(b.re,a?a.jpg:null);return}
+  // velocidade (25/10, pedido dele: transições do começo mais rápidas): filme 1,8x; o slide pode mandar a sua em data-vel
+  const vel=s=>parseFloat(s.dataset.vel)||(fundoDe(s)&&fundoDe(s).tipo==='filme'?1.8:1);
+  if(de!=null&&para===de-1&&b&&b.tipo==='filme'){fundoToca(b.re,a?a.jpg:null,vel(slides[de]));return}
   if(!a){fundoSome();return}
   if(a.tipo==='imagem'){fundoImagem(a.jpg);return}
-  if(de!=null&&para===de+1)fundoToca(a.mp4,a.jpg);else fundoImagem(a.jpg);
+  if(de!=null&&para===de+1)fundoToca(a.mp4,a.jpg,vel(slides[para]));else fundoImagem(a.jpg);
   const prox=fundoDe(slides[para+1]);if(prox&&prox.tipo!=='imagem'&&fPre.getAttribute('src')!==prox.mp4){fPre.src=prox.mp4;fPre.load()}
 }
 
