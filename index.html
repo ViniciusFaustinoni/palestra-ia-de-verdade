@@ -291,6 +291,17 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
    =========================================================== */
 .cue{position:absolute;left:var(--pad-x);right:var(--pad-x);bottom:44px;font:400 30px/1.3 var(--f-body);color:var(--muted);z-index:2}
 .cue b{color:var(--ink);font-weight:800}
+/* VÍDEO NO SLIDE (09/11): quadro 16:9 à direita, do alto do palco quase até o pé (1220×686) */
+.vid{position:absolute;right:70px;top:41px;width:1220px;height:686px;border-radius:18px;overflow:hidden;background:#000 center/cover no-repeat;border:1.5px solid var(--teal-line);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 8px rgba(26,188,156,.06);z-index:3}
+.vid video{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;background:transparent}
+.vid-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;pointer-events:none;background:radial-gradient(circle,rgba(0,0,0,.35),rgba(0,0,0,.6));transition:opacity .4s ease}
+.vid-play b{display:grid;place-items:center;width:150px;height:150px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 14px rgba(26,188,156,.22)}
+.vid-play svg{width:72px;height:72px;fill:#04120F;margin-left:8px}
+.vid-play span{font:600 26px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.vid.tocou .vid-play{opacity:0}
+.vid-passos{display:flex;flex-direction:column;gap:16px;margin-top:40px}
+.vid-passos > div{display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)}
+.vid-passos span{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none}
 
 /* ===========================================================
    CURIOSIDADE DO DR. EDSON (.edson) — fato do dossiê, sempre em 3ª pessoa
@@ -1645,6 +1656,24 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <div class="cue r">Na primeira vez, ele pede licença e aprende. <b>Depois, faz sozinho.</b></div>
 </section>
 
+<section class="slide" data-section="O que é um agente" data-title="Vídeo: o supervisor ensina o agente">
+  <div class="glow g-br"></div>
+  <div class="frame" style="right:1330px;flex-direction:column;justify-content:center">
+    <div class="kicker r">Na prática · 2 minutos</div>
+    <div class="h-m r" style="font-size:56px;line-height:1.08">O supervisor ensina.<br><span class="teal">O agente aprende.</span></div>
+    <div class="vid-passos">
+      <div class="r"><span>1</span>Diz quem é o agente</div>
+      <div class="r"><span>2</span>Ensina a tarefa uma vez</div>
+      <div class="r"><span>3</span>Vira uma habilidade</div>
+      <div class="r"><span>4</span>Faz sozinho e resume</div>
+    </div>
+  </div>
+  <div class="vid r" style="background-image:url('assets/videos/supervisor-ensina-agente.jpg')">
+    <video src="assets/videos/supervisor-ensina-agente.mp4" poster="assets/videos/supervisor-ensina-agente.jpg" preload="none" playsinline controls controlslist="nodownload noplaybackrate" disablepictureinpicture></video>
+    <div class="vid-play"><b><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></b><span>Assista · 2min35</span></div>
+  </div>
+</section>
+
 <section class="slide" data-section="O que é um agente" data-tag="Exemplo do corretor" data-title="O corretor também">
   <div class="glow g-tl"></div>
   <div class="frame l-split" style="gap:70px">
@@ -2780,6 +2809,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <b>número + Enter</b> vai para o slide · <b>Home/End</b> início/fim<br>
   <b>B</b> ou <b>.</b> tela preta · <b>F</b> tela cheia<br>
   <b>P</b> modo apresentador (notas, próximo slide, cronômetro)<br>
+  <b>Slide com vídeo:</b> avançar toca · <b>K</b> pausa/retoma<br>
   <b>?</b> mostra/esconde esta ajuda
 </div>
 
@@ -2986,10 +3016,27 @@ addEventListener('resize',fit);
 /* ===========================================================
    NAVEGAÇÃO
    =========================================================== */
+/* VÍDEO NO SLIDE (09/11): no slide com .vid, o "avançar" toca o vídeo (com som) se ele está parado e não terminou;
+   com o vídeo tocando ou terminado, o "avançar" passa o slide (e o vídeo pausa). K pausa/retoma.
+   Na janela do apresentador o pedido vai para a janela do telão, que decide (se o telão não responder, avança). */
+const vidDe=n=>slides[n]&&slides[n].querySelector('.vid video');
+document.querySelectorAll('.vid video').forEach(v=>{const w=v.closest('.vid');
+  v.addEventListener('play',()=>w.classList.add('tocou'));
+  // clicar nos controles deixa o foco no vídeo; tira o foco para Espaço/setas continuarem sendo do deck
+  w.addEventListener('pointerup',()=>setTimeout(()=>{const a=document.activeElement;if(a&&a!==document.body)a.blur()},0))});
+function vidToca(){const v=vidDe(cur);if(!v||!v.paused||v.ended)return false;v.play().catch(()=>{});return true}
+let vidEspera=null;
+function avanca(){
+  if(!vidDe(cur))return show(cur+1);
+  if(PRESENTER&&chan){chan.postMessage({type:'vid',acao:'avanca'});clearTimeout(vidEspera);vidEspera=setTimeout(()=>show(cur+1),600);return}
+  if(!vidToca())show(cur+1);else chan&&chan.postMessage({type:'vidok'});
+}
+function vidAlterna(){if(PRESENTER){chan&&chan.postMessage({type:'vid',acao:'alterna'});return}const v=vidDe(cur);if(v)v.paused?v.play().catch(()=>{}):v.pause()}
 function show(n,fromRemote){
   n=Math.max(0,Math.min(slides.length-1,n));
-  const de=cur;
+  const de=cur;clearTimeout(vidEspera);
   slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');
+  if(!PRESENTER){slides.forEach((s,i)=>{const v=s.querySelector('.vid video');if(!v)return;if(i!==cur&&!v.paused)v.pause();if(Math.abs(i-cur)<=1&&v.preload!=='auto')v.preload='auto'})}
   if(de!==n||fromRemote===true){fundoPara(de===n?null:de,n);mgPara(n,de===n);mgConta(slides[n]);digita(slides[n])}
   document.querySelector('.progress').style.width=((cur+1)/slides.length*100)+'%';
   if(!PRESENTER)history.replaceState(null,'','#'+(cur+1));
@@ -3002,7 +3049,8 @@ addEventListener('keydown',e=>{
   if(/^[0-9]$/.test(k)){typed+=k;gotoEl.style.display='block';gotoEl.textContent='ir para '+typed;return}
   if(k==='Enter'&&typed){show(parseInt(typed,10)-1);typed='';gotoEl.style.display='none';return}
   if(k==='Escape'){typed='';gotoEl.style.display='none';document.body.classList.remove('show-help');return}
-  if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(k)){e.preventDefault();show(cur+1)}
+  if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(k)){e.preventDefault();avanca()}
+  else if(k==='k'||k==='K'){e.preventDefault();vidAlterna()}
   else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(k)){e.preventDefault();show(cur-1)}
   else if(k==='Home')show(0);else if(k==='End')show(slides.length-1);
   else if(k==='b'||k==='B'||k==='.'){document.body.classList.toggle('black');chan&&chan.postMessage({type:'black',on:document.body.classList.contains('black')})}
@@ -3011,12 +3059,14 @@ addEventListener('keydown',e=>{
   else if(k==='?')document.body.classList.toggle('show-help');
   else if((k==='r'||k==='R')&&PRESENTER){t0=Date.now()}
 });
-if(!PRESENTER)addEventListener('click',e=>{if(!e.target.closest('a'))show(cur+1)});
+if(!PRESENTER)addEventListener('click',e=>{if(!e.target.closest('a,.vid'))avanca()});
 /* celular (24/10): deslizar o dedo para a esquerda avança, para a direita volta (o toque simples continua avançando) */
 let toqueX=null;
 if(!PRESENTER){addEventListener('touchstart',e=>{toqueX=e.touches[0].clientX},{passive:true});
   addEventListener('touchend',e=>{if(toqueX==null)return;const dx=e.changedTouches[0].clientX-toqueX;toqueX=null;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1))},{passive:true})}
-if(chan)chan.onmessage=m=>{const d=m.data;if(d.type==='go'&&d.n!==cur)show(d.n,true);if(d.type==='black')document.body.classList.toggle('black',d.on);if(d.type==='hello'&&!PRESENTER)chan.postMessage({type:'go',n:cur})};
+if(chan)chan.onmessage=m=>{const d=m.data;if(d.type==='go'){clearTimeout(vidEspera);if(d.n!==cur)show(d.n,true)}
+  if(d.type==='vidok')clearTimeout(vidEspera);
+  if(d.type==='vid'&&!PRESENTER){if(d.acao==='avanca')avanca();else vidAlterna()}if(d.type==='black')document.body.classList.toggle('black',d.on);if(d.type==='hello'&&!PRESENTER)chan.postMessage({type:'go',n:cur})};
 
 /* ===========================================================
    MODO APRESENTADOR — notas, próximo slide, cronômetro
