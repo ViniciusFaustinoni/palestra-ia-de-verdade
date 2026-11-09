@@ -257,6 +257,8 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
 .q-box + .q-box{height:118px;font-size:46px;border-color:var(--dim)}
 .q-box .caret{display:inline-block;width:5px;height:.95em;background:var(--teal);margin-left:10px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
+.digita{white-space:pre-wrap}
+.digita.digitando::after{content:'';display:inline-block;width:.07em;height:.82em;background:currentColor;margin-left:.08em;vertical-align:-.04em;animation:blink 1s steps(1) infinite}
 .q-foot{font:400 30px/1.3 var(--f-body);color:var(--muted)}
 .q-foot b{color:var(--ink)}
 
@@ -1213,6 +1215,29 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <div class="cue r">Depois de instalado, ele mora em três lugares. <b>E o saldo é um só.</b></div>
 </section>
 
+<section class="slide" data-section="O Claude" data-tag="A diferença" data-title="No navegador × instalado">
+  <div class="glow g-tr"></div>
+  <div class="frame l-stmt">
+    <div class="l-versus" style="display:flex;height:370px">
+      <div class="vs a r"><div class="vs-top">No navegador</div><div class="one" style="color:var(--muted);font-size:58px">Ele conversa.</div><div style="font:400 28px/1.3 var(--f-body);color:var(--muted)">Escreve, explica e cria o arquivo para você baixar.</div></div>
+      <div class="vs-mid r"><svg class="ic"><use href="#i-arrow"/></svg></div>
+      <div class="vs b r"><div class="vs-top">Instalado no computador</div><div class="one" style="font-size:58px">Ele trabalha.</div><div style="font:400 28px/1.3 var(--f-body);color:var(--muted)">Mexe no navegador, no computador, nos arquivos e nos seus sistemas.</div></div>
+    </div>
+    <p class="sub r" style="margin-top:30px">Muita gente usa só pelo navegador. <b>É usar a metade.</b></p>
+  </div>
+</section>
+
+<section class="slide" data-section="O Claude" data-tag="App no computador" data-title="Os 4 poderes do app">
+  <div class="glow g-bl"></div>
+  <div class="frame l-cards" style="gap:28px">
+    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-globe"/></svg></div><div class="c-top" style="margin-top:6px">1</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Controla o navegador</div><div class="c-sub" style="margin-top:0">entra no portal, clica, preenche e baixa</div></div>
+    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-cpu"/></svg></div><div class="c-top" style="margin-top:6px">2</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Controla o computador</div><div class="c-sub" style="margin-top:0">abre programas e mexe na tela, como você</div></div>
+    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-folder"/></svg></div><div class="c-top" style="margin-top:6px">3</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Mexe nos seus arquivos</div><div class="c-sub" style="margin-top:0">acessa, cria e edita: planilha, PDF, pasta</div></div>
+    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-link"/></svg></div><div class="c-top" style="margin-top:6px">4</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Conversa com seus sistemas</div><div class="c-sub" style="margin-top:0">Gmail, Google Drive, Google Agenda</div></div>
+  </div>
+  <div class="cue r">Baixe o app no computador. <b>É ali que ele vira funcionário.</b></div>
+</section>
+
 <section class="slide" data-fundo="cena:s50" data-section="O Claude" data-title="Tutorial? YouTube.">
   <div class="glow g-tl"></div>
   <div class="frame l-split rev">
@@ -1580,6 +1605,81 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-globe"/></svg></div></div>
   </div>
   <div class="cue r">No seu Chrome, logado por você. <b>A senha é sempre você.</b></div>
+</section>
+
+<section class="slide" data-section="O que é um agente" data-tag="Sessões" data-title="Uma sessão, um especialista">
+  <div class="glow g-tl"></div>
+  <div class="frame l-split">
+    <div class="txt">
+      <div class="h-l r">Cada sessão,</div>
+      <div class="h-l teal r">um especialista.</div>
+      <p class="sub r">Uma conversa para cada assunto. <b>Ela lembra do que aprendeu ali.</b></p>
+    </div>
+    <div class="vis r" style="flex-direction:column;align-items:stretch;gap:16px;width:620px">
+      <div style="display:flex;align-items:center;gap:20px;padding:20px 28px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 32px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-calc"/></svg>Cotação SulAmérica</div>
+      <div style="display:flex;align-items:center;gap:20px;padding:20px 28px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 32px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-clipboard"/></svg>Status das propostas</div>
+      <div style="display:flex;align-items:center;gap:20px;padding:20px 28px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 32px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-check"/></svg>Dar entrada</div>
+      <div style="display:flex;align-items:center;gap:20px;padding:20px 28px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 32px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-image"/></svg>Anúncios</div>
+    </div>
+  </div>
+  <div class="cue r">Uma sessão para cada trabalho. <b>Cada uma vira um agente treinado.</b></div>
+</section>
+
+<section class="slide" data-section="O que é um agente" data-tag="Exemplo do supervisor" data-title="O supervisor pede">
+  <div class="glow g-br"></div>
+  <div class="frame l-split" style="gap:70px">
+    <div class="txt">
+      <div class="chat r" style="width:auto">
+        <div class="ch-top"><svg class="ic"><use href="#i-calc"/></svg>Sessão · Cotação SulAmérica</div>
+        <div class="msg eu" style="max-width:100%;font-size:30px">Meu WhatsApp está logado no navegador. Acesse a conversa com o Carlos e entenda o que ele me pediu. Baixe a documentação e faça a cotação. Ao finalizar, envie para ele.</div>
+      </div>
+    </div>
+    <div class="vis" style="flex-direction:column;align-items:flex-start;gap:14px;width:640px">
+      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">1</span>Abre o WhatsApp Web</div>
+      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">2</span>Lê o pedido do Carlos</div>
+      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">3</span>Baixa os documentos</div>
+      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">4</span>Cota no portal da SulAmérica</div>
+      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">5</span>Envia, com o seu OK</div>
+    </div>
+  </div>
+  <div class="cue r">Na primeira vez, ele pede licença e aprende. <b>Depois, faz sozinho.</b></div>
+</section>
+
+<section class="slide" data-section="O que é um agente" data-tag="Exemplo do corretor" data-title="O corretor também">
+  <div class="glow g-tl"></div>
+  <div class="frame l-split" style="gap:70px">
+    <div class="txt">
+      <div class="h-l r">O corretor</div>
+      <div class="h-l teal r">também.</div>
+      <p class="sub r">A mesma lógica: <b>pede, ele faz, você confere.</b></p>
+    </div>
+    <div class="vis r" style="flex-direction:column;align-items:stretch;gap:16px;width:860px">
+      <div class="msg eu" style="max-width:100%;font-size:30px">Cota para a Maria: 2 vidas, Barra da Tijuca, na SulAmérica e na Bradesco.</div>
+      <div class="msg eu" style="max-width:100%;font-size:30px">Qual o status da proposta do João? Entra no portal e me diz.</div>
+      <div class="msg eu" style="max-width:100%;font-size:30px">O que ficou pendente essa semana? Me manda a lista.</div>
+    </div>
+  </div>
+  <div class="cue r">Cotação, status de proposta, pendência: <b>uma frase cada.</b></div>
+</section>
+
+<section class="slide" data-section="O que é um agente" data-tag="Gerente de sessões" data-title="O gerente de sessões">
+  <div class="glow g-c"></div>
+  <div class="frame" style="flex-direction:column;justify-content:center;gap:40px">
+    <div class="h-m r" style="font-size:66px">Um gerente para os <span style="color:var(--teal)">seus agentes</span>.</div>
+    <div style="display:flex;align-items:center;gap:34px">
+      <div class="r" style="display:flex;align-items:center;gap:18px;padding:24px 34px;border-radius:24px;background:var(--card);border:1.5px solid var(--line);font:800 38px/1 var(--f-display);color:var(--ink)"><svg class="ic" style="font-size:44px;color:var(--teal)"><use href="#i-user"/></svg>Você</div>
+      <svg class="ic r" style="font-size:54px;color:var(--teal)"><use href="#i-arrow"/></svg>
+      <div class="r" style="display:flex;align-items:center;gap:18px;padding:28px 38px;border-radius:24px;background:linear-gradient(180deg,#0E1B18,var(--card));border:1.5px solid var(--teal);box-shadow:0 0 70px rgba(26,188,156,.18);font:800 42px/1.05 var(--f-display);color:var(--ink)"><svg class="ic" style="font-size:50px;color:var(--teal)"><use href="#i-bot"/></svg>Gerente<br>de sessões</div>
+      <svg class="ic r" style="font-size:54px;color:var(--teal)"><use href="#i-arrow"/></svg>
+      <div class="r" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1">
+        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-calc"/></svg>Cotação SulAmérica</div>
+        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-clipboard"/></svg>Status das propostas</div>
+        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-check"/></svg>Dar entrada</div>
+        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-image"/></svg>Anúncios</div>
+      </div>
+    </div>
+  </div>
+  <div class="cue r">Treinou os agentes? <b>Daí em diante, você só fala com o gerente.</b></div>
 </section>
 
 <section class="slide" data-fundo="filme:f5" data-section="O que é um agente" data-tag="A pastinha" data-title="A pastinha voltou">
@@ -2661,6 +2761,15 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   </div>
 </section>
 
+<section class="slide" data-section="Fechamento" data-title="Só o impossível interessa">
+  <div class="glow g-c"></div>
+  <div class="frame" style="flex-direction:column;justify-content:center;gap:16px">
+    <div class="h-s r" style="font-size:56px;color:var(--muted);--d:.3s">Até hoje… tudo isso era impossível…</div>
+    <div class="h-s r" style="font-size:56px;color:var(--muted);--d:1.6s">Mas como todos aqui já sabemos…</div>
+    <div class="h-l teal digita" data-atraso="3.4" style="font-size:112px;margin-top:40px">“SÓ O IMPOSSÍVEL INTERESSA”</div>
+  </div>
+</section>
+
 </div></div>
 
 <div class="progress"></div>
@@ -2831,6 +2940,21 @@ function mgQuadro(agora){
   if(mgTr&&agora-mgTr.t0>mgTr.dur+50)mgTr=null;
 }
 if(!PRESENTER)requestAnimationFrame(mgQuadro);
+/* frase que se escreve sozinha (09/11, último slide): o texto fica inteiro no HTML (PDF, site e render);
+   ao entrar no slide ele apaga e digita, começando depois de data-atraso segundos */
+let dgVez=0;
+function digita(s){
+  if(PRESENTER)return;
+  const vez=++dgVez;
+  s.querySelectorAll('.digita').forEach(el=>{
+    if(!el.dataset.dgTxt){el.dataset.dgTxt=el.textContent;el.style.minHeight=el.getBoundingClientRect().height/(stage.getBoundingClientRect().height/DECK.H)+'px'}
+    const txt=el.dataset.dgTxt;el.textContent='';el.classList.add('digitando');
+    let i=0;
+    const passo=()=>{if(vez!==dgVez){el.textContent=txt;el.classList.remove('digitando');return}
+      el.textContent=txt.slice(0,++i);if(i<txt.length)setTimeout(passo,txt[i-1]===' '?60:115)};
+    setTimeout(passo,(parseFloat(el.dataset.atraso)||0)*1000);
+  });
+}
 /* números que contam: o número fica numa caixa com a largura final, para a linha não sacudir */
 let mgVez=0;
 function mgConta(s){
@@ -2866,7 +2990,7 @@ function show(n,fromRemote){
   n=Math.max(0,Math.min(slides.length-1,n));
   const de=cur;
   slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');
-  if(de!==n||fromRemote===true){fundoPara(de===n?null:de,n);mgPara(n,de===n);mgConta(slides[n])}
+  if(de!==n||fromRemote===true){fundoPara(de===n?null:de,n);mgPara(n,de===n);mgConta(slides[n]);digita(slides[n])}
   document.querySelector('.progress').style.width=((cur+1)/slides.length*100)+'%';
   if(!PRESENTER)history.replaceState(null,'','#'+(cur+1));
   if(PRESENTER)renderPresenter();
