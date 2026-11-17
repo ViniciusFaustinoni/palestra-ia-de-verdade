@@ -177,6 +177,8 @@ img,video,canvas,svg{max-width:100%;max-height:100%}
    =========================================================== */
 .chrome{position:absolute;font:600 18px/1 var(--f-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);z-index:2}
 .chrome b{color:var(--teal);font-weight:600}
+/* número do slide no cantinho (16/11, pedido dele): "10 de 99" */
+.num{position:absolute;right:40px;bottom:18px;font:500 18px/1 var(--f-mono);letter-spacing:.08em;color:var(--muted);opacity:.85;z-index:3;pointer-events:none;white-space:nowrap}
 .chrome.tl{left:var(--pad-x);top:64px}.chrome.tr{right:var(--pad-x);top:64px}
 .chrome.bl{left:var(--pad-x);bottom:52px}.chrome.br{right:var(--pad-x);bottom:52px}
 
@@ -695,33 +697,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xxl r">R$ 27</div>
     <p class="sub r">Comecei vendendo dental. Quem me colocou nisso foi <b>a minha mãe</b>.</p>
   </div>
-  <div class="gancho">Até eu resolver subir de categoria.</div>
-</section>
-
-<section class="slide" data-fundo="filme:f1" data-section="Trajetória" data-station="2/15" data-title="Saúde">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split rev">
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-trend"/></svg></div></div>
-    <div class="txt">
-      <div class="kicker r">Depois do dental</div>
-      <div class="h-xl r">Saúde.</div>
-      <p class="sub r">Resolvi vender saúde: ticket maior, comissão maior, <b>dor de cabeça maior</b>.</p>
-    </div>
-  </div>
-  <div class="gancho">Aí eu conheci o plantão.</div>
-</section>
-
-<section class="slide" data-fundo="filme:f2" data-section="Trajetória" data-station="3/15" data-title="5 horas, 0 clientes">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-xl r">5 horas.</div>
-      <div class="h-xl teal r">0 clientes.</div>
-      <p class="sub r">Plantão de 5 horas <b>esperando cliente entrar na loja.</b></p>
-    </div>
-    <div class="vis r pop"><div class="clock"><i class="h"></i><i class="m"></i></div></div>
-  </div>
-  <div class="gancho">E no plantão eu tinha companhia.</div>
+  <div class="gancho">Depois veio a saúde. E o plantão, com ela.</div>
 </section>
 
 <section class="slide" data-fundo="filme:f3" data-section="Trajetória" data-station="3/15" data-title="A pastinha de 2 kg">
@@ -759,16 +735,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xxl teal r">100%</div>
     <p class="sub r">Comecei a pagar 100% da comissão para os amigos venderem, <b>e eu ficava com o bônus.</b></p>
   </div>
-  <div class="gancho">Generoso, né? Tinha um motivo.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s10" data-section="Trajetória" data-station="5/15" data-title="Falta de tempo">
-  <div class="glow g-bl"></div>
-  <div class="frame l-quote">
-    <p class="q r" style="font-size:112px;line-height:1.08">Não é generosidade.<br>É <em>falta de tempo</em>.</p>
-    <p class="sub r" style="margin-top:34px">Leads demais. <b>Dividi com os amigos.</b></p>
-  </div>
-  <div class="gancho">Sem perceber, eu virei outra coisa.</div>
+  <div class="gancho">Era falta de tempo. E, sem perceber, eu virei outra coisa.</div>
 </section>
 
 <section class="slide" data-fundo="cena:s11" data-section="Trajetória" data-station="6/15" data-title="Supervisor">
@@ -791,59 +758,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       </div>
     </div>
   </div>
-  <div class="gancho">E supervisor tem uma dor só dele.</div>
-</section>
-
-<section class="slide" data-fundo="cena:e3" data-section="Trajetória" data-station="7/15" data-title="Qual a carência? ×1000">
-  <div class="glow g-br"></div>
-  <div class="frame l-split rev">
-    <div class="vis r pop">
-      <div class="ic-circle lg" style="position:relative"><svg class="ic"><use href="#i-phone"/></svg><span style="position:absolute;top:6px;right:-18px;background:var(--bad);color:#fff;font:900 46px/1 var(--f-display);letter-spacing:-.03em;padding:16px 22px;border-radius:999px;box-shadow:0 10px 40px rgba(255,107,91,.45)">999+</span></div>
-    </div>
-    <div class="txt">
-      <div class="h-l r">"Qual a carência?" <span class="teal">×1000</span></div>
-      <p class="sub r">A dor do supervisor: todo mundo perguntando a mesma coisa, <b>o dia inteiro.</b></p>
-    </div>
-  </div>
-  <div class="gancho">A minha resposta teve nome.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s13" data-section="Trajetória" data-station="8/15" data-title="Maya">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-xxl r">Maya.</div>
-      <p class="sub r">Criei a Maya olhando a dor do corretor: <b>informação na hora certa.</b></p>
-    </div>
-    <div class="vis r pop" style="gap:36px">
-      <div class="ic-circle sm ghost"><svg class="ic"><use href="#i-bot"/></svg></div>
-      <div class="ic-circle lg"><svg class="ic"><use href="#i-bot"/></svg></div>
-      <div class="ic-circle sm ghost"><svg class="ic"><use href="#i-bot"/></svg></div>
-    </div>
-  </div>
-  <div class="gancho">Só que o dia continuou com 24 horas.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s14" data-section="Trajetória" data-station="9/15" data-title="Não fecha">
-  <div class="glow g-bl"></div>
-  <div class="frame l-stmt center">
-    <div class="r" style="display:flex;align-items:flex-start;gap:34px;margin-bottom:44px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px"><svg class="ic"><use href="#i-book"/></svg></div>Aprender</div>
-      <span style="font:900 60px/150px var(--f-display);color:var(--dim)">+</span>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px"><svg class="ic"><use href="#i-zap"/></svg></div>Aplicar</div>
-      <span style="font:900 60px/150px var(--f-display);color:var(--dim)">+</span>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px"><svg class="ic"><use href="#i-clock"/></svg></div>Dormir</div>
-      <span style="font:900 60px/150px var(--f-display);color:var(--dim)">+</span>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px"><svg class="ic"><use href="#i-heart"/></svg></div>Filhas</div>
-      <span style="font:900 60px/150px var(--f-display);color:var(--dim)">+</span>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px"><svg class="ic"><use href="#i-wallet"/></svg></div>Boletos</div>
-      <span style="font:900 60px/150px var(--f-display);color:var(--dim)">=</span>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;font:600 22px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--bad)"><div class="ic-circle" style="width:150px;height:150px;font-size:74px;background:rgba(255,107,91,.12);border-color:rgba(255,107,91,.5);color:var(--bad)"><svg class="ic"><use href="#i-calendar"/></svg></div>24 h</div>
-    </div>
-    <div class="h-l r">Não <span class="bad">fecha.</span></div>
-    <p class="sub r">Com filhas pequenas e boletos, <b>não sobrava hora nenhuma para aprender.</b></p>
-  </div>
-  <div class="gancho">Aí eu esbarrei numa conta brutal.</div>
+  <div class="gancho">Só que o dia continuava com 24 horas.</div>
 </section>
 
 <section class="slide" data-fundo="cena:e2" data-section="Trajetória" data-station="9/15" data-title="04:00">
@@ -878,25 +793,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xxl r">uns <span class="teal">10 bi.</span></div>
       <p class="sub r">Foi o preço da Amil em 2012. <b>Detalhe técnico.</b></p>
   </div>
-  <div class="gancho">Mas eu ganhei tempo. E usei.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s18" data-section="Trajetória" data-station="10/15" data-title="Sistemas">
-  <div class="glow g-bl"></div>
-  <div class="frame l-split rev">
-    <div class="vis r pop" style="gap:36px">
-      <div class="ic-circle lg"><svg class="ic"><use href="#i-code"/></svg></div>
-      <div style="display:flex;flex-direction:column;gap:36px">
-        <div class="ic-circle sm ghost"><svg class="ic"><use href="#i-layout"/></svg></div>
-        <div class="ic-circle sm ghost"><svg class="ic"><use href="#i-cpu"/></svg></div>
-      </div>
-    </div>
-    <div class="txt">
-      <div class="h-xl r">Sistemas.</div>
-      <p class="sub r">Com o tempo das 4 da manhã, <b>aprendi a desenvolver sistemas.</b></p>
-    </div>
-  </div>
-  <div class="gancho">Ele ensinava a Amil inteira.</div>
+  <div class="gancho">Mas uma coisa a gente tinha em comum.</div>
 </section>
 
 <section class="slide" data-section="Trajetória" data-station="10/15" data-tag="Três campeões" data-title="Gerente de treinamento">
@@ -925,29 +822,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <p class="sub r" style="margin-top:36px">Veio o boom das IAs: tudo o que eu aprendi <b>virou superpoder.</b></p>
   </div>
-  <div class="gancho">Deixa eu apresentar a minha equipe.</div>
-</section>
-
-<section class="slide" data-fundo="cena:e7" data-section="Trajetória" data-station="12/15" data-title="Hoje: 1 pessoa + IAs">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">Meu time hoje</div>
-      <div class="h-l r">1 pessoa.</div>
-      <div class="h-l teal r">Um exército</div>
-      <div class="h-l teal r">de IAs.</div>
-      <p class="sub r">Eu lidero um time gigante. <b>Total: 1 pessoa.</b></p>
-    </div>
-    <div class="vis r pop">
-      <div style="display:grid;grid-template-columns:repeat(5,76px);gap:34px;font-size:76px;color:var(--teal)">
-        <svg class="ic" style="color:var(--ink);stroke-width:2.4"><use href="#i-user"/></svg>
-        <svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg>
-        <svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg>
-        <svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg>
-        <svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg><svg class="ic"><use href="#i-bot"/></svg>
-      </div>
-    </div>
-  </div>
   <div class="gancho">E a minha antiga equipe? Tem dona.</div>
 </section>
 
@@ -960,7 +834,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <p class="sub r" style="margin-top:30px">Minha antiga equipe hoje é <b>da minha mãe</b>. Ela virou supervisora.</p>
   </div>
-  <div class="gancho">Enquanto isso, o exército cresceu.</div>
+  <div class="gancho">Enquanto isso, eu fui construindo.</div>
 </section>
 
 <section class="slide" data-section="Trajetória" data-station="13/15" data-title="Mosaico dos sistemas">
@@ -976,18 +850,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="tile hi r" style="grid-column:span 2;font-size:54px"><svg class="ic"><use href="#i-layers"/></svg>CyberNanda</div>
     <div class="tile hi r" style="grid-column:span 2;font-size:54px"><svg class="ic"><use href="#i-bot"/></svg>Cyber Bati</div>
     <p class="sub r" style="grid-column:1/-1;margin:4px 0 0">Corretoras, operadoras, associações de veículos. <b>E dois que vocês conhecem.</b></p>
-  </div>
-  <div class="gancho">Olha esses dois de perto.</div>
-</section>
-
-<section class="slide" data-section="Trajetória" data-station="13/15" data-title="CyberNanda e Cyber Bati">
-  <div class="glow g-c"></div>
-  <div class="frame l-stmt">
-    <div class="l-cards" style="display:flex;height:390px">
-      <div class="card hi r"><div class="c-top">Propostas · antecipações</div><div class="c-ic" style="font-size:96px"><svg class="ic"><use href="#i-layers"/></svg></div><div class="c-big" style="font-size:100px">CyberNanda</div></div>
-      <div class="card hi r"><span class="badge">24/7</span><div class="c-top">Chatbot dos corretores</div><div class="c-ic" style="font-size:96px"><svg class="ic"><use href="#i-bot"/></svg></div><div class="c-big" style="font-size:100px">Cyber Bati</div></div>
-    </div>
-    <p class="sub r" style="margin-top:30px">Um cuida das propostas e antecipações da United inteira. <b>O outro tira dúvida a qualquer hora.</b></p>
   </div>
   <div class="gancho">Uma pergunta rápida para a sala.</div>
 </section>
@@ -1007,56 +869,12 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xxl teal r">fui eu.</div>
     <p class="sub r" style="margin-top:34px">Construí <b>cada um deles.</b></p>
   </div>
-  <div class="gancho">E o tempo que sobrou virou duas coisas.</div>
+  <div class="gancho">Mas que IA é essa? Capítulo 2.</div>
 </section>
 
-<section class="slide" data-section="Trajetória" data-station="14/15" data-title="Livro e treinamento">
-  <div class="glow g-bl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-l r">Livro.</div>
-      <div class="h-l teal r">Treinamento.</div>
-      <p class="sub r">Escrevi um livro e criei um treinamento. <b>O livro, vocês levam de graça.</b></p>
-    </div>
-    <div class="vis r pop">
-      <img src="assets/livro-capa.png" alt="" style="height:528px;border-radius:14px;box-shadow:0 30px 80px #000">
-      <div style="width:460px;height:528px;box-sizing:border-box;background:linear-gradient(180deg,#0E1B18,var(--card));border:1.5px solid var(--teal);border-radius:24px;padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 0 60px rgba(26,188,156,.18)">
-        <div class="kicker">Treinamento de tráfego</div>
-        <img src="assets/tpc-logo.png" alt="Tráfego Para Corretores" style="width:340px;align-self:center">
-        <div class="h-s" style="font-size:30px;font-weight:700;line-height:1.25">29 aulas de<br>Meta, Google e IA</div>
-      </div>
-    </div>
-  </div>
-  <div class="gancho">E quando alguém me liga, eu digo isto.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s29" data-section="Trajetória" data-station="15/15" data-title="Eu tenho tempo, pode falar!">
-  <div class="glow g-c"></div>
-  <div class="frame l-stmt center">
-    <div class="h-xl r">Eu tenho tempo,</div>
-    <div class="h-xl teal r" style="margin-top:14px">pode falar!</div>
-    <p class="sub r" style="margin-top:34px">É o que eu digo quando alguém me liga. <b>A IA devolve tempo.</b></p>
-  </div>
-  <div class="gancho">Agora, o mapa da tarde.</div>
-</section>
 
 <!-- ===== 02-cap2-ia.html ===== -->
-<section class="slide" data-section="O mapa da tarde" data-title="Nove capítulos">
-  <div class="glow g-tr"></div>
-  <div class="frame l-mosaic" style="--cols:3;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr 1fr;gap:18px">
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>1&nbsp;·&nbsp;Minha&nbsp;história</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">de R$ 27 às 4 da manhã</span></div>
-    <div class="tile hi r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>2&nbsp;·&nbsp;O&nbsp;que&nbsp;é&nbsp;IA</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">de onde veio e o que mudou</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>3&nbsp;·&nbsp;Contratando&nbsp;o&nbsp;Claude</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">planos · por que assinar · como pedir</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>4&nbsp;·&nbsp;Primeiras&nbsp;tarefas</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">painel · site</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>5&nbsp;·&nbsp;O&nbsp;que&nbsp;é&nbsp;um&nbsp;agente</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">skill · criar o seu · os prontos</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>6&nbsp;·&nbsp;O&nbsp;agente&nbsp;do&nbsp;corretor</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">anúncio · cotação · retorno</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>7&nbsp;·&nbsp;O&nbsp;agente&nbsp;do&nbsp;supervisor</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">portais · pendências · 7h</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>8&nbsp;·&nbsp;No&nbsp;automático</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">memória · apps · horário · celular</span></div>
-    <div class="tile r" style="font-size:32px;flex-direction:column;gap:8px;padding:0 20px"><span>9&nbsp;·&nbsp;Entre&nbsp;nesse&nbsp;mundo</span><span style="font:400 22px/1.25 var(--f-body);color:var(--muted);letter-spacing:0">o algoritmo · os presentes</span></div>
-  </div>
-  <div class="cue r">O primeiro já passou. O ponto alto é o 5: <b>o que é um agente.</b></div>
-  <div class="gancho">Capítulo 2: o que é IA.</div>
-</section>
+
 
 <section class="slide" data-fundo="cena:c2" data-tag="Capítulo 2 de 9" data-station="2/9" data-title="Capítulo 2 — O que é IA">
   <div class="glow g-br"></div>
@@ -1066,21 +884,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="act-bar"></div>
     <p class="sub r">Sem aula de faculdade: de onde veio e <b>por que agora é diferente</b>.</p>
   </div>
-  <div class="gancho">Começa por uma frase.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s32" data-section="O que é IA" data-tag="Em uma frase" data-title="Leu de tudo. Menos você.">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">IA, em uma frase</div>
-      <div class="h-xl r" style="font-size:128px">Leu de tudo.</div>
-      <div class="h-xl teal r" style="font-size:128px">Menos você.</div>
-      <p class="sub r">Sabe muito sobre o mundo. Sobre o seu cliente, a sua tabela e o seu jeito, <b>nada</b>.</p>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-book"/></svg></div></div>
-  </div>
-  <div class="gancho">E ela não chegou ontem.</div>
+  <div class="gancho">Ela não chegou ontem.</div>
 </section>
 
 <section class="slide" data-section="As eras da IA" data-title="As eras da IA">
@@ -1095,21 +899,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
   </div>
   <div class="cue r">A IA não chegou ontem: URA, chat, prompt. <b>E agora, a era dos agentes.</b></div>
-  <div class="gancho">Começa pela que todo mundo conhece.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s34" data-section="As eras da IA" data-tag="Antes de 2022" data-title="Desculpe, não entendi">
-  <div class="glow g-bl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">A IA que a gente conhecia</div>
-      <div class="h-l r">"Desculpe,</div>
-      <div class="h-l r">não entendi."</div>
-      <div class="sub r">Digite 1 para boleto, 2 para segunda via. <b>Era essa a IA que a gente conhecia.</b></div>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg ghost"><svg class="ic"><use href="#i-phone"/></svg></div></div>
-  </div>
-  <div class="gancho">Levanta a mão quem já fez isso.</div>
+  <div class="gancho">Começa pela URA. Levanta a mão quem já fez isso.</div>
 </section>
 
 <section class="slide" data-fundo="cena:e9" data-section="As eras da IA" data-tag="Antes de 2022" data-title="ATENDENTE!">
@@ -1119,51 +909,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xxl warn r" style="font-size:156px">ATENDENTE!</div>
     <p class="sub r">Quem aqui já gritou isso para o telefone? <b>Levanta a mão.</b></p>
   </div>
-  <div class="gancho">Até a máquina aprender a conversar.</div>
-</section>
-
-<section class="slide" data-section="As eras da IA" data-tag="Era do chat" data-title="Chat">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split rev">
-    <div class="vis r"><figure class="shot"><img src="assets/web/chatgpt-inicio.png" alt="Tela inicial do ChatGPT: Por onde começamos? Pergunte ao ChatGPT"></figure></div>
-    <div class="txt">
-      <div class="kicker r">30 · 11 · 2022</div>
-      <div class="h-xl r">Chat.</div>
-      <div class="sub r">O ChatGPT conversa: você pergunta, ele responde. <b>Quem trabalha continua sendo você.</b></div>
-    </div>
-  </div>
-  <div class="gancho">E o mundo inteiro quis conversar.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s37" data-section="As eras da IA" data-tag="Era do chat" data-title="100 mi em 2 meses">
-  <div class="glow g-br"></div>
-  <div class="frame l-number">
-    <div class="num r">100 mi</div>
-    <div class="num-label r">usuários em 2 meses.<small>TikTok: ~9 meses. Instagram: ~2,5 anos.</small></div>
-  </div>
-  <div class="gancho">E inventaram uma profissão nova.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s38" data-section="As eras da IA" data-tag="Era do prompt" data-title="Prompt">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">2023 – 2024</div>
-      <div class="h-xl r">Prompt.</div>
-      <div class="sub r">Virou profissão: engenheiro de prompt. <b>E o Instagram lotou de PDF com 500 prompts.</b></div>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-text"/></svg></div></div>
-  </div>
-  <div class="gancho">E não era brincadeira. Olha o salário.</div>
-</section>
-
-<section class="slide" data-section="As eras da IA" data-tag="Era do prompt" data-title="US$ 335 mil">
-  <div class="glow g-c"></div>
-  <div class="frame l-number">
-    <div class="num r"><small>até US$ </small>335<small> mil</small></div>
-    <div class="num-label r">por ano.<small>Vaga de engenheiro de prompt, 2023. <b style="color:var(--ink)">Adivinha a empresa.</b></small></div>
-  </div>
-  <div class="gancho">Um ano depois, a virada.</div>
+  <div class="gancho">Até a IA aprender a usar o computador.</div>
 </section>
 
 <section class="slide" data-section="As eras da IA" data-tag="Era dos agentes" data-title="Agentes">
@@ -1176,16 +922,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <div class="trad r"><span class="lbl">Em corretorês</span><span class="fato">Agente = <b>funcionário</b>. Não só responde: faz.</span></div>
     </div>
     <div class="vis r"><figure class="shot tall"><img src="assets/web/anthropic-computer-use.png" alt="Anúncio da Anthropic: Introducing computer use, 22 de outubro de 2024"></figure></div>
-  </div>
-  <div class="gancho">A virada cabe em uma frase.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s41" data-section="As eras da IA" data-tag="Era dos agentes" data-title="Do explica ao faz">
-  <div class="glow g-c"></div>
-  <div class="frame l-stmt center">
-    <div class="h-l muted strike r">"Me explica como faz."</div>
-    <div class="h-xxl teal r" style="margin-top:36px">"Faz."</div>
-    <p class="sub r">A virada: você para de pedir a receita, <b>e ele passa a cozinhar.</b></p>
   </div>
   <div class="gancho">Do jeito que todo mundo aqui entende.</div>
 </section>
@@ -1225,20 +961,9 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
   </div>
   <div class="cue r">Como as duas maiores operadoras do Rio brigando por cliente. <b>Quem ganha é você.</b></div>
-  <div class="gancho">E elas não estão sozinhas.</div>
-</section>
-
-<section class="slide" data-section="Quem faz a IA" data-tag="E as outras" data-title="E as outras IAs">
-  <div class="glow g-tr"></div>
-  <div class="frame l-cards">
-    <div class="card r"><div class="c-top">Do Elon Musk</div><div class="c-big">Grok</div><div class="c-sub">a IA da xAI, <b>dentro do X</b></div></div>
-    <div class="card r"><div class="c-top">Do Google</div><div class="c-big">Gemini</div><div class="c-sub">no Gmail, no Android <b>e na busca</b></div></div>
-    <div class="card r"><div class="c-top">Agente</div><div class="c-big">Manus</div><div class="c-sub">faz tarefas sozinho, <b>na nuvem</b></div></div>
-    <div class="card hi r"><div class="c-top">E muitas outras</div><div class="c-big">+</div><div class="c-sub">todo mês <b>nasce uma</b></div></div>
-  </div>
-  <div class="cue r">Dá para usar outras. <b>Hoje, a gente fala das mais conhecidas.</b></div>
   <div class="gancho">E qual eu uso para tudo? Capítulo 3.</div>
 </section>
+
 
 <!-- ===== 03-cap3-claude.html ===== -->
 <section class="slide" data-fundo="cena:c3" data-tag="Capítulo 3 de 9" data-station="3/9" data-title="Capítulo 3 — Contratando o Claude">
@@ -1258,47 +983,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="card r" style="justify-content:flex-start;gap:6px;padding:30px 44px"><div class="c-top" style="margin-bottom:6px">ChatGPT · da OpenAI</div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font:600 30px/1.2 var(--f-body);color:var(--ink)">Free</span><span style="font:900 48px/1 var(--f-display);letter-spacing:-.03em;color:var(--ink)">R$ 0</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font:600 30px/1.2 var(--f-body);color:var(--ink)">Go</span><span style="font:900 48px/1 var(--f-display);letter-spacing:-.03em;color:var(--ink)">R$ 39,99</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font:600 30px/1.2 var(--f-body);color:var(--teal)">Plus <span style="display:inline-block;margin-left:10px;font:600 15px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:#04120F;background:var(--teal);padding:8px 10px;border-radius:999px;vertical-align:4px">faz sozinho daqui</span></span><span style="font:900 48px/1 var(--f-display);letter-spacing:-.03em;color:var(--teal)">R$ 99,90</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)"><span style="font:600 30px/1.2 var(--f-body);color:var(--ink)">Pro · a partir de</span><span style="font:900 48px/1 var(--f-display);letter-spacing:-.03em;color:var(--ink)">R$ 525</span></div></div>
   </div>
   <div class="cue r">Por mês. Para a IA trabalhar sozinha: <b>Claude Pro ou ChatGPT Plus.</b></div>
-  <div class="gancho">E por que pagar, se tem grátis?</div>
-</section>
-
-<section class="slide" data-section="O Claude" data-tag="Por que assinar" data-title="O grátis conversa, o pago trabalha">
-  <div class="frame l-versus">
-    <div class="vs a r">
-      <div class="vs-top">Free e Go · para testar</div>
-      <div class="one muted">Conversa.</div>
-      <p class="sub" style="margin:0">Responde, com limite. <b>Para trabalhar, falta o principal.</b></p>
-    </div>
-    <div class="vs-mid r">×</div>
-    <div class="vs b r">
-      <div class="vs-top">Claude Pro · ChatGPT Plus</div>
-      <div class="one">Trabalha.</div>
-      <p class="sub" style="margin:0">Usa o seu Chrome, mexe nas suas pastas e <b>trabalha no horário</b>.</p>
-    </div>
-  </div>
-  <div class="cue r">O grátis conversa. O pago trabalha. <b>Uma venda a mais no mês já paga.</b></div>
-  <div class="gancho">E onde ele mora?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s49" data-section="O Claude" data-tag="Depois de instalado" data-title="Onde ele mora">
-  <div class="glow g-c"></div>
-  <div class="frame l-flow stack">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-folder"/></svg></div><div class="lbl">Computador<small>abre e lê as suas pastas</small></div></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-globe"/></svg></div><div class="lbl">Chrome<small>navega e clica por você</small></div></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-phone"/></svg></div><div class="lbl">Celular<small>mesma conta, mesmo saldo</small></div></div>
-  </div>
-  <div class="cue r">Depois de instalado, ele mora em três lugares. <b>E o saldo é um só.</b></div>
-  <div class="gancho">Instalado, ele ganha quatro poderes.</div>
-</section>
-
-<section class="slide" data-section="O Claude" data-tag="App no computador" data-title="Os 4 poderes do app">
-  <div class="glow g-bl"></div>
-  <div class="frame l-cards" style="gap:28px">
-    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-globe"/></svg></div><div class="c-top" style="margin-top:6px">1</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Controla o navegador</div><div class="c-sub" style="margin-top:0">entra no portal, clica, preenche e baixa</div></div>
-    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-cpu"/></svg></div><div class="c-top" style="margin-top:6px">2</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Controla o computador</div><div class="c-sub" style="margin-top:0">abre programas e mexe na tela, como você</div></div>
-    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-folder"/></svg></div><div class="c-top" style="margin-top:6px">3</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Mexe nos seus arquivos</div><div class="c-sub" style="margin-top:0">acessa, cria e edita: planilha, PDF, pasta</div></div>
-    <div class="card r" style="justify-content:flex-start;gap:14px;padding:32px 34px"><div class="c-ic"><svg class="ic"><use href="#i-link"/></svg></div><div class="c-top" style="margin-top:6px">4</div><div class="c-big" style="font-size:44px;white-space:normal;line-height:1.05;margin-top:0">Conversa com seus sistemas</div><div class="c-sub" style="margin-top:0">Gmail, Google Drive, Google Agenda</div></div>
-  </div>
-  <div class="cue r">Baixe o app no computador. <b>É ali que ele vira funcionário.</b></div>
   <div class="gancho">Com sinceridade: em que nível vocês estão?</div>
 </section>
 
@@ -1413,34 +1097,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <div class="q-foot r">Celular na mão. <b>Eu espero.</b> Vou contar todas as buscas da tarde.</div>
     </div>
   </div>
-  <div class="gancho">Instalou? Olha a tela dele.</div>
-</section>
-
-<section class="slide" data-section="Como pedir" data-tag="A tela do Claude" data-title="A tela do Claude">
-  <div class="glow g-tl"></div>
-  <div class="frame" style="align-items:center;justify-content:center;gap:60px">
-    <div class="r" style="width:1160px;height:560px;flex:none;display:flex;border-radius:26px;border:1.5px solid var(--line);background:#0B0F0E;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)">
-      <div style="width:300px;flex:none;background:#0E1413;border-right:1px solid var(--line);padding:26px 22px;display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;gap:12px;font:800 26px/1 var(--f-body);color:var(--ink);padding:14px 16px;border:1.5px solid var(--teal);border-radius:14px;background:var(--teal-dim)"><span class="pin">2</span>+ Novo chat</div>
-        <div style="font:600 16px/1 var(--f-mono);letter-spacing:.14em;color:var(--muted);margin-top:12px">RECENTES</div>
-        <div style="font:400 23px/1.2 var(--f-body);color:var(--ink)">Cotação da Marta</div>
-        <div style="font:400 23px/1.2 var(--f-body);color:var(--muted)">Anúncio da semana</div>
-        <div style="font:400 23px/1.2 var(--f-body);color:var(--muted)">Dúvida de carência</div>
-      </div>
-      <div style="flex:1;min-width:0;display:flex;flex-direction:column;padding:24px 34px;gap:18px">
-        <div style="display:flex;align-items:center;gap:10px;align-self:center"><span class="pin">3</span><span style="font:700 22px/1 var(--f-body);color:#04120F;background:var(--teal);padding:10px 18px;border-radius:999px">Chat</span><span style="font:600 22px/1 var(--f-body);color:var(--muted);padding:10px 18px;border:1px solid var(--line);border-radius:999px">Cowork</span><span style="font:600 22px/1 var(--f-body);color:var(--muted);padding:10px 18px;border:1px solid var(--line);border-radius:999px">Code</span></div>
-        <div class="msg eu" style="font-size:24px">Cota pra 46 anos no Méier.</div>
-        <div class="msg ele" style="font-size:24px">Três opções que atendem o Pasteur. <b>Mando o PDF?</b></div>
-        <div style="margin-top:auto;display:flex;align-items:center;gap:14px;border:1.5px solid var(--teal-line);border-radius:18px;padding:18px 20px;font:400 24px/1 var(--f-body);color:var(--muted)"><span class="pin">1</span>Escreva aqui o que você quer…</div>
-      </div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:34px;width:560px;flex:none">
-      <div class="r" style="display:flex;gap:18px;align-items:flex-start"><span class="pin">1</span><div style="font:800 34px/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink)">A conversa<div style="font:400 26px/1.3 var(--f-body);color:var(--muted);letter-spacing:0;margin-top:8px">você escreve embaixo, ele responde em cima</div></div></div>
-      <div class="r" style="display:flex;gap:18px;align-items:flex-start"><span class="pin">2</span><div style="font:800 34px/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink)">Novo chat<div style="font:400 26px/1.3 var(--f-body);color:var(--muted);letter-spacing:0;margin-top:8px">assunto novo, conversa nova; as antigas ficam do lado</div></div></div>
-      <div class="r" style="display:flex;gap:18px;align-items:flex-start"><span class="pin">3</span><div style="font:800 34px/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink)">Chat, Cowork e Code<div style="font:400 26px/1.3 var(--f-body);color:var(--muted);letter-spacing:0;margin-top:8px">conversar, trabalhar no seu computador e as sessões</div></div></div>
-    </div>
-  </div>
-  <div class="gancho">E o que eu escrevo nessa caixinha?</div>
+  <div class="gancho">Instalou? Agora, o que eu escrevo?</div>
 </section>
 
 <section class="slide" data-fundo="cena:s52" data-section="Como pedir" data-title="A regra">
@@ -1459,32 +1116,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="vs-mid r">×</div>
     <div class="vs b r"><div class="vs-top">Hoje · era dos agentes</div><div class="one">"Cota pro meu cliente de 46 no Méier."</div></div>
   </div>
-  <div class="gancho">O segredo: dizer o quê, não o como.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s54" data-section="Como pedir" data-title="Objetivo, não passo a passo">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-xl r">Objetivo.</div>
-      <div class="h-l muted strike r" style="margin-top:14px">Passo a passo.</div>
-      <p class="sub r">Diga aonde quer chegar: <b>"quero mandar 3 opções pra um casal no Méier."</b></p>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-pin"/></svg></div></div>
-  </div>
-  <div class="gancho">E se eu esquecer alguma coisa?</div>
-</section>
-
-<section class="slide" data-section="Como pedir" data-tag="Recebe · faz · devolve" data-title="Ele pergunta o que faltar">
-  <div class="glow g-tl"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl">Você pede<small>o objetivo, numa linha</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-question"/></svg></div><div class="lbl">Pergunta<small>ele completa o que faltou</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-check"/></svg></div><div class="lbl">Faz<small>e pede a sua aprovação</small></div></div>
-  </div>
-  <div class="cue r">Esqueceu algo? Ele pergunta. <b>Precisa de login ou aprovação? Ele pede.</b></div>
   <div class="gancho">E se não ficar do jeito que você queria?</div>
 </section>
 
@@ -1501,18 +1132,9 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <div class="tile hi r" style="height:130px;padding:0 56px"><svg class="ic"><use href="#i-chat"/></svg>"Faz mais curto."</div>
     </div>
   </div>
-  <div class="gancho">E ele nunca reclama de pergunta.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s57" data-section="Como pedir" data-title="Pode falar.">
-  <div class="glow g-c"></div>
-  <div class="frame l-stmt center">
-    <div class="kicker r">Ele tem tempo</div>
-    <div class="h-xxl r">Pode <span class="teal">falar.</span></div>
-    <p class="sub r">"Eu tenho tempo, pode falar": <b>agora quem diz isso é ele.</b></p>
-  </div>
   <div class="gancho">Agora, as primeiras tarefas.</div>
 </section>
+
 
 <!-- ===== 04-cap4-tarefas.html ===== -->
 <section class="slide" data-fundo="cena:c4" data-tag="Capítulo 4 de 9" data-station="4/9" data-title="Capítulo 4 — Primeiras tarefas">
@@ -1523,22 +1145,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="act-bar"></div>
     <p class="sub r">Uma frase vira ferramenta: painel e site. <b>Nada ao vivo.</b></p>
   </div>
-  <div class="gancho">Primeiro, o cardápio.</div>
-</section>
-
-<section class="slide" data-section="O que ele faz" data-tag="O cardápio" data-title="O que ele entrega">
-  <div class="frame l-mosaic" style="--cols:4;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:1fr 1fr auto;gap:22px">
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-folder"/></svg>Organiza as suas pastas</div>
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-file"/></svg>Lê o PDF e a tabela da operadora</div>
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-table"/></svg>Monta a planilha que calcula a sua comissão</div>
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-layout"/></svg>Faz a apresentação para o cliente</div>
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-text"/></svg>Escreve a proposta, o e-mail, o documento</div>
-    <div class="tile r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-search"/></svg>Pesquisa na internet e resume</div>
-    <div class="tile hi r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-chart"/></svg>Monta o painel dos seus leads</div>
-    <div class="tile hi r" style="font-size:34px;line-height:1.12;text-align:center"><svg class="ic"><use href="#i-globe"/></svg>Cria o seu site</div>
-    <p class="sub r" style="grid-column:1/-1;margin:4px 0 0">Tudo saindo de uma conversa. <b>Hoje eu mostro os dois em destaque: o painel e o site.</b></p>
-  </div>
-  <div class="gancho">O painel, no Claude, tem outro nome.</div>
+  <div class="gancho">A primeira tem um nome estranho.</div>
 </section>
 
 <section class="slide" data-section="Painéis" data-title="Não é texto">
@@ -1566,20 +1173,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <div class="vis r"><figure class="shot tall"><img src="assets/controle-de-leads-escuro.png" alt="Meus Leads"></figure></div>
   </div>
-  <div class="gancho">O segundo é a conta que todo corretor faz.</div>
-</section>
-
-<section class="slide" data-section="Painéis" data-tag="Exemplo 2 de 2" data-title="Quanto eu ganho se fechar?">
-  <div class="glow g-br"></div>
-  <div class="frame l-split rev">
-    <div class="txt">
-      <div class="kicker r">Corretor</div>
-      <div class="h-l r">Quanto eu</div>
-      <div class="h-l teal r">ganho?</div>
-      <p class="sub r">Peço a comissão dos 5 contratos. <b>Muda um valor, recalcula na hora.</b></p>
-    </div>
-    <div class="vis r"><figure class="shot tall hi"><img src="assets/calculadora-de-comissao-escuro.png" alt="Quanto eu ganho se fechar?"></figure></div>
-  </div>
   <div class="gancho">Para não esquecer: duas buscas.</div>
 </section>
 
@@ -1594,20 +1187,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <div class="q-foot r">Uma ensina a criar; a outra mostra dashboard pronto. <b>Eu espero.</b></div>
     </div>
   </div>
-  <div class="gancho">Se ele faz painel, faz o seu site?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s67" data-section="Site com o Claude" data-tag="Site" data-title="Saber pedir um site">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-xl r">Precisa</div>
-      <div class="h-xl teal r">pedir.</div>
-      <p class="sub r">Você não precisa saber fazer site. Precisa saber pedir. <b>E publicar.</b></p>
-    </div>
-    <div class="vis"><div class="ic-circle lg r pop"><svg class="ic"><use href="#i-globe"/></svg></div></div>
-  </div>
-  <div class="gancho">Só que tem jeito errado de pedir.</div>
+  <div class="gancho">E site? Faz. Mas tem jeito errado de pedir.</div>
 </section>
 
 <section class="slide" data-section="Site com o Claude" data-title="Site bonito = plano bom e barato">
@@ -1632,33 +1212,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="num r">4 a 6</div>
     <div class="num-label r">sites de que você gosta<small>Ele olha, entende o estilo e segue.</small></div>
   </div>
-  <div class="gancho">E o que um site de corretor precisa ter?</div>
-</section>
-
-<section class="slide" data-section="Site com o Claude" data-tag="Site de corretor" data-title="O site do corretor">
-  <div class="frame l-cards">
-    <div class="card r">
-      <div class="c-ic"><svg class="ic"><use href="#i-user"/></svg></div>
-      <div class="c-big" style="font-size:46px;white-space:normal">Quem você é</div>
-      <div class="c-sub">foto, nome de guerra, tempo de estrada</div>
-    </div>
-    <div class="card r">
-      <div class="c-ic"><svg class="ic"><use href="#i-shield"/></svg></div>
-      <div class="c-big" style="font-size:46px;white-space:normal">Operadoras</div>
-      <div class="c-sub">com quem você trabalha</div>
-    </div>
-    <div class="card r">
-      <div class="c-ic"><svg class="ic"><use href="#i-chat"/></svg></div>
-      <div class="c-big" style="font-size:46px;white-space:normal">WhatsApp</div>
-      <div class="c-sub">um botão, bem visível</div>
-    </div>
-    <div class="card hi r">
-      <div class="c-ic"><svg class="ic"><use href="#i-clipboard"/></svg></div>
-      <div class="c-big" style="font-size:46px;white-space:normal">Formulário curto</div>
-      <div class="c-sub">o pedido de cotação</div>
-    </div>
-  </div>
-  <div class="cue r">Corretor não precisa de efeito especial. <b>Precisa ser achado e chamado.</b></div>
   <div class="gancho">Celular na mão: duas buscas.</div>
 </section>
 
@@ -1699,23 +1252,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="arrow r" style="font:900 80px/1 var(--f-display)">=</div>
     <div class="step r"><div class="ic-circle" style="box-shadow:0 0 0 2px var(--teal),0 0 90px rgba(26,188,156,.3)"><svg class="ic"><use href="#i-folder"/></svg></div><div class="lbl" style="font-size:42px;color:var(--teal)">Uma pasta<small>tudo isso, salvo<br>e pronto para ler</small></div></div>
   </div>
-  <div class="gancho">E como ele aprende uma habilidade?</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Ensinar → skill" data-title="Do ensinar à skill">
-  <div class="glow g-c"></div>
-  <div class="frame l-flow stack">
-    <div class="step r"><div class="ic-circle sm"><svg class="ic"><use href="#i-eye"/></svg></div><div class="lbl" style="font-size:34px">Faz junto<small style="font-size:22px">você mostra<br>uma vez</small></div></div>
-    <div class="arrow r" style="width:56px;font-size:46px"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle sm"><svg class="ic"><use href="#i-pencil"/></svg></div><div class="lbl" style="font-size:34px">Ele anota<small style="font-size:22px">o que<br>aprendeu</small></div></div>
-    <div class="arrow r" style="width:56px;font-size:46px"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle sm"><svg class="ic"><use href="#i-clipboard"/></svg></div><div class="lbl" style="font-size:34px">Vira regra<small style="font-size:22px">ele guarda<br>como regra</small></div></div>
-    <div class="arrow r" style="width:56px;font-size:46px"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle sm"><svg class="ic"><use href="#i-refresh"/></svg></div><div class="lbl" style="font-size:34px">Você testa<small style="font-size:22px">ele executa<br>várias vezes</small></div></div>
-    <div class="arrow r" style="width:56px;font-size:46px"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle sm" style="box-shadow:0 0 0 2px var(--teal),0 0 70px rgba(26,188,156,.3)"><svg class="ic"><use href="#i-sparkles"/></svg></div><div class="lbl" style="font-size:34px;color:var(--teal)">Vira skill<small style="font-size:22px">saiu perfeito?<br>"cria uma skill"</small></div></div>
-  </div>
-  <div class="gancho">Tem um jeito de ensinar sem escrever.</div>
+  <div class="gancho">E como se ensina uma habilidade? Sem escrever.</div>
 </section>
 
 <section class="slide" data-section="O que é um agente" data-tag="Ensinar" data-title="Gravar uma Skill: você faz, ele aprende">
@@ -1732,31 +1269,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
   </div>
   <div class="cue r">Em vez de escrever o passo a passo, <b>você mostra.</b></div>
-  <div class="gancho">Como se grava? Em quatro passos.</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Passo a passo" data-title="Gravar uma Skill em 4 passos">
-  <div class="glow g-c"></div>
-  <div class="frame l-flow stack">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-cpu"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">1</span>Abre<small>o app do Claude<br>no computador</small></div></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-video"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">2</span>Grava<small>no + escolhe<br>Gravar uma Skill</small></div></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">3</span>Faz e fala<small>a tarefa na tela,<br>explicando em voz alta</small></div></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-sparkles"/></svg></div><div class="lbl" style="color:var(--teal)"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">4</span>Skill pronta<small>você testa<br>e ajusta</small></div></div>
-  </div>
-  <div class="cue r">Antes de gravar: entre no portal e feche o que é pessoal. <b>Tudo o que aparece na tela é gravado.</b></div>
-  <div class="gancho">Com as skills prontas, nasce o agente.</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Crie o seu" data-title="Crie o seu agente">
-  <div class="glow g-tr"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-eye"/></svg></div><div class="lbl">Ensina<small>faz junto ou<br>grava a tela</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-sparkles"/></svg></div><div class="lbl">Vira skill<small>cada tarefa,<br>uma skill</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle" style="box-shadow:0 0 0 2px var(--teal),0 0 90px rgba(26,188,156,.3)"><svg class="ic"><use href="#i-folder"/></svg></div><div class="lbl" style="color:var(--teal)">Vira agente<small>"cria um agente<br>com essas skills"</small></div></div>
-  </div>
-  <div class="cue r">Ensinou as tarefas? <b>Uma frase junta tudo num agente.</b></div>
   <div class="gancho">Quer ver isso acontecendo? Assiste.</div>
 </section>
 
@@ -1779,12 +1291,15 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <div class="gancho">E se o agente já vier pronto, numa pasta?</div>
 </section>
 
-<section class="slide" data-fundo="cena:s74" data-section="O que é um agente" data-tag="Como ele nasce" data-title="Leia esta pasta">
-  <div class="glow g-bl"></div>
-  <div class="frame l-quote">
-    <p class="q r">Leia esta pasta e <em>instale</em> o agente.</p>
-    <p class="sub r">Você manda o Claude ler. Ele entende tudo, e <b>aquela conversa vira o próprio agente</b>.</p>
+<section class="slide" data-section="O que é um agente" data-tag="Passar adiante" data-title="Exportar o agente numa pasta">
+  <div class="glow g-c"></div>
+  <div class="frame l-flow stack">
+    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-pencil"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">1</span>Ensina<small>a digitar a proposta<br>no portal, uma vez</small></div></div>
+    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-bot"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">2</span>Vira agente<small>uma skill e um agente<br>especialista nisso</small></div></div>
+    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-folder"/></svg></div><div class="lbl"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">3</span>Exporta<small>"exporta esse agente<br>numa pasta"</small></div></div>
+    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-users"/></svg></div><div class="lbl" style="color:var(--teal)"><span style="display:block;margin-bottom:14px;font:600 24px/1 var(--f-mono);letter-spacing:.18em;color:var(--teal)">4</span>O colega lê<small>"leia esta pasta", no Claude<br>dele ou em outra IA</small></div></div>
   </div>
+  <div class="cue r">Ensinou uma vez? Vira uma pasta. <b>E a pasta passa de mão em mão.</b></div>
   <div class="gancho">Para entender skill com calma: uma busca.</div>
 </section>
 
@@ -1837,35 +1352,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="card r" style="flex-direction:row;align-items:center;justify-content:flex-start;gap:28px;padding:26px 36px"><div class="c-ic"><svg class="ic"><use href="#i-send"/></svg></div><div><div class="c-big" style="font-size:42px;white-space:normal;line-height:1.08;margin-top:0">Fala com o cliente</div><div class="c-sub" style="margin-top:10px">só se você pedir: abre o WhatsApp Web e envia. <b>Nada sai sem o seu ok.</b></div></div></div>
   </div>
   <div class="cue r">Ele trabalha <b>para o corretor</b>. Com o cliente, só quando você pede.</div>
-  <div class="gancho">E como esse funcionário trabalha?</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Como funciona" data-title="Descreve, ele planeja, faz e avisa">
-  <div class="glow g-tr"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl">Descreve<small>o resultado,<br>numa frase</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-clipboard"/></svg></div><div class="lbl">Plano<small>e pergunta<br>o que faltou</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-cpu"/></svg></div><div class="lbl">Trabalha<small>sozinho:<br>você pode sair</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-bell"/></svg></div><div class="lbl">Avisa<small>pronto, ou<br>"preciso de você"</small></div></div>
-  </div>
-  <div class="cue r">Você descreve, vai tomar um café e <b>volta com o trabalho pronto</b>.</div>
-  <div class="gancho">E onde ele trabalha? No seu Chrome.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s79" data-section="O que é um agente" data-tag="Claude in Chrome" data-title="Ele usa o navegador como você">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split rev">
-    <div class="txt">
-      <div class="h-xl r">Abre, clica,</div>
-      <div class="h-xl teal r">digita, preenche.</div>
-      <p class="sub r">Como você faria. <b>No seu Chrome, com o seu login.</b></p>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-globe"/></svg></div></div>
-  </div>
-  <div class="cue r">No seu Chrome, logado por você. <b>A senha é sempre você.</b></div>
   <div class="gancho">E dá para ter um para cada assunto.</div>
 </section>
 
@@ -1885,66 +1371,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
   </div>
   <div class="cue r">Uma sessão para cada trabalho. <b>Cada uma vira um agente treinado.</b></div>
-  <div class="gancho">Olha um pedido de verdade.</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Exemplo do supervisor" data-title="O supervisor pede">
-  <div class="glow g-br"></div>
-  <div class="frame l-split" style="gap:70px">
-    <div class="txt">
-      <div class="chat r" style="width:auto">
-        <div class="ch-top"><svg class="ic"><use href="#i-calc"/></svg>Sessão · Cotação SulAmérica</div>
-        <div class="msg eu" style="max-width:100%;font-size:30px">Meu WhatsApp está logado no navegador. Acesse a conversa com o Carlos e entenda o que ele me pediu. Baixe a documentação e faça a cotação. Ao finalizar, envie para ele.</div>
-      </div>
-    </div>
-    <div class="vis" style="flex-direction:column;align-items:flex-start;gap:14px;width:640px">
-      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">1</span>Abre o WhatsApp Web</div>
-      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">2</span>Lê o pedido do Carlos</div>
-      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">3</span>Baixa os documentos</div>
-      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">4</span>Cota no portal da SulAmérica</div>
-      <div class="r" style="display:flex;align-items:center;gap:18px;font:400 30px/1.2 var(--f-body);color:var(--ink)"><span style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--teal-dim);border:1.5px solid var(--teal-line);color:var(--teal);font:800 22px/1 var(--f-display);flex:none">5</span>Envia, com o seu OK</div>
-    </div>
-  </div>
-  <div class="cue r">Na primeira vez, ele pede licença e aprende. <b>Depois, faz sozinho.</b></div>
-  <div class="gancho">E o corretor usa igual.</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Exemplo do corretor" data-title="O corretor também">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split" style="gap:70px">
-    <div class="txt">
-      <div class="h-l r">O corretor</div>
-      <div class="h-l teal r">também.</div>
-      <p class="sub r">A mesma lógica: <b>pede, ele faz, você confere.</b></p>
-    </div>
-    <div class="vis r" style="flex-direction:column;align-items:stretch;gap:16px;width:860px">
-      <div class="msg eu" style="max-width:100%;font-size:30px">Cota para a Maria: 2 vidas, Barra da Tijuca, na SulAmérica e na Bradesco.</div>
-      <div class="msg eu" style="max-width:100%;font-size:30px">Qual o status da proposta do João? Entra no portal e me diz.</div>
-      <div class="msg eu" style="max-width:100%;font-size:30px">O que ficou pendente essa semana? Me manda a lista.</div>
-    </div>
-  </div>
-  <div class="cue r">Cotação, status de proposta, pendência: <b>uma frase cada.</b></div>
-  <div class="gancho">E quando você tiver vários especialistas?</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Gerente de sessões" data-title="O gerente de sessões">
-  <div class="glow g-c"></div>
-  <div class="frame" style="flex-direction:column;justify-content:center;gap:40px">
-    <div class="h-m r" style="font-size:66px">Um gerente para os <span style="color:var(--teal)">seus agentes</span>.</div>
-    <div style="display:flex;align-items:center;gap:34px">
-      <div class="r" style="display:flex;align-items:center;gap:18px;padding:24px 34px;border-radius:24px;background:var(--card);border:1.5px solid var(--line);font:800 38px/1 var(--f-display);color:var(--ink)"><svg class="ic" style="font-size:44px;color:var(--teal)"><use href="#i-user"/></svg>Você</div>
-      <svg class="ic r" style="font-size:54px;color:var(--teal)"><use href="#i-arrow"/></svg>
-      <div class="r" style="display:flex;align-items:center;gap:18px;padding:28px 38px;border-radius:24px;background:linear-gradient(180deg,#0E1B18,var(--card));border:1.5px solid var(--teal);box-shadow:0 0 70px rgba(26,188,156,.18);font:800 42px/1.05 var(--f-display);color:var(--ink)"><svg class="ic" style="font-size:50px;color:var(--teal)"><use href="#i-bot"/></svg>Gerente<br>de sessões</div>
-      <svg class="ic r" style="font-size:54px;color:var(--teal)"><use href="#i-arrow"/></svg>
-      <div class="r" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1">
-        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-calc"/></svg>Cotação SulAmérica</div>
-        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-clipboard"/></svg>Status das propostas</div>
-        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-check"/></svg>Dar entrada</div>
-        <div style="display:flex;align-items:center;gap:20px;padding:18px 24px;border-radius:20px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);font:700 28px/1.1 var(--f-display);letter-spacing:-.02em;color:var(--ink)"><svg class="ic" style="font-size:38px;color:var(--teal);flex:none"><use href="#i-image"/></svg>Anúncios</div>
-      </div>
-    </div>
-  </div>
-  <div class="cue r">Treinou os agentes? <b>Daí em diante, você só fala com o gerente.</b></div>
   <div class="gancho">E os meus, como chegam? Lembra da pastinha?</div>
 </section>
 
@@ -1959,21 +1385,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-folder"/></svg></div></div>
   </div>
-  <div class="gancho">E como instala? Quatro passos.</div>
-</section>
-
-<section class="slide" data-section="O que é um agente" data-tag="Instalar" data-title="Instalar em 4 passos">
-  <div class="glow g-tl"></div>
-  <div class="frame l-flow stack">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-download"/></svg></div><div class="lbl">Baixa<small>de graça, na<br>página da palestra</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-folder"/></svg></div><div class="lbl">Abre<small>no Claude, e<br>entrega a pasta</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl">Pede<small>"instale",<br>numa frase</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-question"/></svg></div><div class="lbl">Responde<small>a entrevista, uma<br>pergunta por vez</small></div></div>
-  </div>
-  <div class="cue r">Baixa, abre, pede e responde. <b>Ninguém programa nada.</b></div>
   <div class="gancho">Antes de ver os dois trabalhando: duas buscas.</div>
 </section>
 
@@ -2025,20 +1436,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="h-xl teal r">anúncio.</div>
     <p class="sub r">A tabela que pesava na pastinha vira anúncio em minutos, <b>com a sua cara</b>.</p>
   </div>
-  <div class="gancho">Como? Três passos.</div>
-</section>
-
-<section class="slide" data-section="Agente de Imagens" data-tag="Recebe · faz · devolve" data-title="Tabela → pergunta → anúncio">
-  <div class="glow g-tl"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-table"/></svg></div><div class="lbl">Tabela<small>a da operadora, como vem</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-question"/></svg></div><div class="lbl">Pergunta<small>pra quem? qual hospital?</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-image"/></svg></div><div class="lbl">Anúncio<small>pronto, com a sua cara</small></div></div>
-  </div>
-  <div class="cue r">Você manda a tabela, ele pergunta antes de criar <b>e devolve o anúncio pronto.</b></div>
-  <div class="gancho">E as perguntas são a melhor parte.</div>
+  <div class="gancho">Antes de criar, ele pergunta.</div>
 </section>
 
 <section class="slide" data-section="Agente de Imagens" data-tag="Antes de criar, ele pergunta" data-title="O briefing">
@@ -2060,73 +1458,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <p class="q r">O Claude contratou o ChatGPT como <em>estagiário</em>.</p>
     <div class="who r">Ele usa a melhor ferramenta pra cada trabalho</div>
   </div>
-  <div class="gancho">E a logo da operadora? Já vem junto.</div>
-</section>
-
-<section class="slide" data-section="Agente de Imagens" data-tag="Pasta de logos no pacote" data-title="Logos das operadoras">
-  <div class="frame l-mosaic" style="--cols:5">
-    <div class="tile logo r"><img src="assets/logos/amil.png" alt="Amil"></div>
-    <div class="tile logo r"><img src="assets/logos/bradesco-saude.png" alt="Bradesco Saúde"></div>
-    <div class="tile logo r"><img src="assets/logos/sulamerica.png" alt="SulAmérica"></div>
-    <div class="tile logo r"><img src="assets/logos/unimed.png" alt="Unimed"></div>
-    <div class="tile logo r"><img src="assets/logos/porto.png" alt="Porto"></div>
-    <div class="tile logo r"><img src="assets/logos/hapvida.png" alt="Hapvida"></div>
-    <div class="tile r"><img src="assets/logos/notredame-saude-branco.png" alt="NotreDame Intermédica"></div>
-    <div class="tile logo r"><img src="assets/logos/prevent-senior.png" alt="Prevent Senior"></div>
-    <div class="tile logo r"><img src="assets/logos/medsenior.png" alt="MedSênior"></div>
-    <div class="tile logo r"><img src="assets/logos/leve-saude.png" alt="Leve Saúde"></div>
-    <div class="tile logo r"><img src="assets/logos/klini-saude.png" alt="Klini Saúde"></div>
-    <div class="tile logo r"><img src="assets/logos/select-saude.png" alt="Select Saúde"></div>
-    <div class="tile r"><img src="assets/logos/assim-saude-branco.png" alt="Assim Saúde"></div>
-    <div class="tile logo r"><img src="assets/logos/grupo-assim.png" alt="Grupo Assim"></div>
-    <div class="tile logo r"><img src="assets/logos/samoc-saude.png" alt="Samoc Saúde"></div>
-  </div>
-  <div class="cue r">A pasta de logos das operadoras vem no pacote. <b>O agente já sabe usar.</b></div>
-  <div class="gancho">Agora, uma contradição.</div>
-</section>
-
-<section class="slide" data-section="Seu Instagram" data-tag="Carrossel" data-title="Eu escrevi este livro">
-  <div class="glow g-tl"></div>
-  <div class="frame l-stmt center">
-    <div class="kicker r">Eu escrevi este livro</div>
-    <img class="r pop" src="assets/livro-capa.png" alt="Capa do livro Desinstale seu Instagram" style="height:400px;border-radius:14px;box-shadow:0 30px 80px #000">
-    <p class="sub r">Um livro inteiro sobre <b>largar o Instagram</b>.</p>
-  </div>
-  <div class="gancho">Calma, eu explico.</div>
-</section>
-
-<section class="slide plain" data-fundo="cena:s98" data-section="Seu Instagram" data-title="Calma.">
-  <div class="frame l-stmt center">
-    <div class="h-xxl r pop">Calma.</div>
-    <p class="sub r">Eu não mudei de ideia. <b>Mudei quem abre o aplicativo.</b></p>
-  </div>
-  <div class="gancho">A ideia é esta.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s99" data-section="Seu Instagram" data-tag="A promessa" data-title="Ele faz. E posta.">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="h-xl r">Ele faz.</div>
-      <div class="h-xl teal r">E posta.</div>
-      <p class="sub r">Com um conector, ele publica <b>direto no seu Instagram</b>. Você só aprova.</p>
-    </div>
-    <div class="vis"><div class="ic-circle lg r pop"><svg class="ic"><use href="#i-hand"/></svg></div></div>
-  </div>
-  <div class="gancho">Funciona assim: recebe, faz, devolve.</div>
-</section>
-
-<section class="slide" data-section="Seu Instagram" data-tag="Recebe · faz · devolve" data-title="Carrossel: recebe, faz, devolve">
-  <div class="glow g-tl"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl">Tema<small>"um carrossel sobre carência"</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-pencil"/></svg></div><div class="lbl">Prévia<small>você ajusta, como ajusta gente</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-phone"/></svg></div><div class="lbl">Imagens<small>no tamanho do feed, prontas</small></div></div>
-  </div>
-  <div class="cue r">O Agente de Imagens da página já faz. <b>Seu jeito, você ensina uma vez.</b></div>
-  <div class="gancho">E sobre o quê? O que perguntam no seu WhatsApp.</div>
+  <div class="gancho">E o carrossel? O assunto vem do seu WhatsApp.</div>
 </section>
 
 <section class="slide" data-section="Seu Instagram" data-tag="Ideias de carrossel" data-title="Ideias de carrossel">
@@ -2161,35 +1493,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <div class="gancho">Anúncio e carrossel prontos. E a cotação?</div>
 </section>
 
-<section class="slide" data-section="Copiloto do Corretor" data-tag="No simulador" data-title="Copiloto do Corretor">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">Só do corretor</div>
-      <div class="h-xl r">Copiloto</div>
-      <div class="h-xl teal r">do Corretor.</div>
-      <p class="sub r">Uso todo dia: cotação, atendimento, retornos e simulador novo. <b>Só do corretor.</b></p>
-    </div>
-    <div class="vis r pop">
-      <div style="width:420px;height:420px;border-radius:50%;background:#F4F6F5;display:grid;place-items:center;box-shadow:0 0 0 2px var(--teal-line),0 0 110px rgba(26,188,156,.28)"><img src="assets/copiloto-logo.png" alt="Copiloto do Corretor" style="width:320px;height:320px"></div>
-    </div>
-  </div>
-  <div class="gancho">Como se pede a cotação? Do jeito que você fala.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s106" data-section="Copiloto do Corretor" data-tag="Recebe · faz · devolve" data-title="46 anos no Méier">
-  <div class="glow g-tl"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-chat"/></svg></div><div class="lbl">Pede<small>"cota pra 46 anos<br>no Méier"</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-cpu"/></svg></div><div class="lbl">Faz<small>simulador + bairro<br>+ conferência</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-send"/></svg></div><div class="lbl">Devolve<small>PDF no seu WhatsApp<br>+ retorno anotado</small></div></div>
-  </div>
-  <div class="cue r">Peço do jeito que falo. Ele cota, <b>confere o PDF</b> e me manda no WhatsApp.</div>
-  <div class="gancho">Na prática, é uma conversa.</div>
-</section>
-
 <section class="slide" data-section="Copiloto do Corretor" data-tag="Exemplo" data-title="Conversa: a cotação da Marta">
   <div class="glow g-tr"></div>
   <div class="frame l-split">
@@ -2208,102 +1511,9 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       </div>
     </div>
   </div>
-  <div class="gancho">E tem uma cidade que ele conhece muito bem.</div>
-</section>
-
-<section class="slide" data-section="Copiloto do Corretor" data-title="Duque de Caxias">
-  <div class="frame l-wall">
-    <div class="wall-arrow r pop"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="txt">
-      <div class="kicker r">Duque de Caxias</div>
-      <div class="h-l r">Ele conhece Caxias.</div>
-      <div class="h-l teal r">Dr. Edson começou lá.</div>
-      <p class="sub r">Conhece os hospitais pelo nome. Ele está interligado <b>ao mapa hospitalar</b>.</p>
-    </div>
-  </div>
-  <div class="gancho">E onde chega tudo isso? No seu WhatsApp.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s110" data-section="Copiloto do Corretor" data-tag="WhatsApp Web" data-title="No seu WhatsApp">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split rev">
-    <div class="txt">
-      <div class="kicker r">A entrega</div>
-      <div class="h-l r">No seu</div>
-      <div class="h-l teal r">WhatsApp.</div>
-      <p class="sub r">Pelo <b>WhatsApp Web + Claude in Chrome</b>: sem API, sem número novo.</p>
-    </div>
-    <div class="vis">
-      <div class="ic-circle lg r pop"><svg class="ic"><use href="#i-globe"/></svg></div>
-      <div class="ic-circle lg r pop"><svg class="ic"><use href="#i-chat"/></svg></div>
-    </div>
-  </div>
-  <div class="gancho">E tem uma pergunta que ele responde todo dia.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s113" data-section="Copiloto do Corretor" data-tag="Retornos" data-title="O que tem pra hoje?">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">Todo dia de manhã</div>
-      <div class="h-l r">O que tem</div>
-      <div class="h-l teal r">pra hoje?</div>
-      <p class="sub r">Ele anota o retorno sozinho. Cotação enviada e esquecida é <b>venda perdida</b>.</p>
-    </div>
-    <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-bell"/></svg></div></div>
-  </div>
-  <div class="gancho">Na prática, de manhã:</div>
-</section>
-
-<section class="slide" data-section="Copiloto do Corretor" data-tag="Exemplo" data-title="Conversa: o que tem pra hoje">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">Na prática, de manhã</div>
-      <div class="h-l r">Ele lembra.</div>
-      <div class="h-l teal r">Você vende.</div>
-      <p class="sub r">E ainda <b>escreve a mensagem</b>, no seu jeito de falar.</p>
-    </div>
-    <div class="vis r">
-      <div class="chat">
-        <div class="ch-top"><svg class="ic"><use href="#i-bot"/></svg>Você e o Copiloto do Corretor</div>
-        <div class="msg eu r">O que tem pra hoje?</div>
-        <div class="msg ele r">3 retornos. A Marta não responde desde quinta. <b>Escrevo pra ela?</b></div>
-        <div class="msg eu r">Escreve. Me mostra antes.</div>
-      </div>
-    </div>
-  </div>
-  <div class="gancho">E quando aparece um simulador novo?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s113" data-section="Copiloto do Corretor" data-title="Me manda o link">
-  <div class="glow g-bl"></div>
-  <div class="frame l-quote">
-    <p class="q r">Me manda o link que eu <em>aprendo</em>.</p>
-    <p class="sub r">Simulador novo? Mando o link, ele testa uma cotação e <b>passa a operar</b>.</p>
-  </div>
-  <div class="gancho">E lembram da minha pastinha?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s114" data-section="Copiloto do Corretor" data-title="A pastinha">
-  <div class="glow g-tl"></div>
-  <div class="frame l-number">
-    <div class="num r">1.022</div>
-    <div class="num-label r">hospitais na pastinha.<small>342 hospitais no RJ, 680 em SP. E a pastinha não pesa 2 kg.</small></div>
-  </div>
-  <div class="gancho">Agora, a pergunta que ninguém faz alto.</div>
-</section>
-
-<section class="slide" data-section="Copiloto do Corretor" data-tag="Quanto custa" data-title="Custo">
-  <div class="glow g-c"></div>
-  <div class="frame l-cards">
-    <div class="card hi r"><span class="badge">Só isso</span><div class="c-top">Claude Pro</div><div class="c-big">Pro</div><div class="c-sub">o plano que vocês viram no começo</div></div>
-    <div class="card r"><div class="c-top">Copiloto do Corretor</div><div class="c-big">R$ 0</div><div class="c-sub">na página da palestra</div></div>
-    <div class="card r"><div class="c-top">Base de hospitais</div><div class="c-big">R$ 0</div><div class="c-sub">presente pra quem está nesta sala</div></div>
-  </div>
-  <div class="cue r">Só pago o Claude. <b>Simulador de terceiros continua pedindo o seu login.</b></div>
   <div class="gancho">E o supervisor? Agora é a vez de vocês.</div>
 </section>
+
 
 <!-- ===== 07-cap7-supervisor.html ===== -->
 <section class="slide" data-fundo="cena:c7" data-tag="Capítulo 7 de 9" data-station="7/9" data-title="Capítulo 7 — O agente do supervisor">
@@ -2341,30 +1551,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-eye"/></svg></div></div>
   </div>
-  <div class="gancho">Como ele trabalha? Três passos.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s119" data-section="Agente do Supervisor" data-tag="Recebe · faz · devolve" data-title="Ronda, compara, avisa">
-  <div class="glow g-tr"></div>
-  <div class="frame l-flow">
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-globe"/></svg></div><div class="lbl">Ronda<small>nos portais,<br>no seu Chrome</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-search"/></svg></div><div class="lbl">Compara<small>o que mudou desde ontem</small></div></div>
-    <div class="arrow r"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-mail"/></svg></div><div class="lbl">Avisa<small>relatório das 7h<br>+ aviso pronto pro corretor</small></div></div>
-  </div>
-  <div class="gancho">E o que ele faz com cada proposta?</div>
-</section>
-
-<section class="slide" data-section="Agente do Supervisor" data-tag="O que mudou" data-title="Implantou, pendência, proposta nova">
-  <div class="glow g-c"></div>
-  <div class="frame l-cards" style="gap:28px">
-    <div class="card hi r"><div class="c-ic"><svg class="ic"><use href="#i-check"/></svg></div><div><div class="c-top">Implantou</div><div class="c-big" style="font-size:54px">Dá entrada</div><div class="c-sub">do jeito da sua empresa: <b>na 1ª vez, você ensina</b></div></div></div>
-    <div class="card r"><div class="c-ic"><svg class="ic"><use href="#i-bell"/></svg></div><div><div class="c-top">Pendência</div><div class="c-big" style="font-size:54px">Escreve</div><div class="c-sub">o aviso pro corretor <b>daquela proposta</b></div></div></div>
-    <div class="card r"><div class="c-ic"><svg class="ic"><use href="#i-question"/></svg></div><div><div class="c-top">Na dúvida</div><div class="c-big" style="font-size:54px">Pergunta</div><div class="c-sub">nome diferente, duas propostas: <b>não chuta</b></div></div></div>
-    <div class="card r"><div class="c-ic"><svg class="ic"><use href="#i-pencil"/></svg></div><div><div class="c-top">Proposta nova</div><div class="c-big" style="font-size:54px">Cadastra</div><div class="c-sub">e anexa os documentos, <b>depois que aprende com você</b></div></div></div>
-  </div>
-  <div class="trad bar r"><span class="lbl">Na 1ª vez</span><span class="fato">Cada empresa dá entrada de um jeito. <b>Você ensina uma vez</b>; depois, ele faz sozinho.</span></div>
   <div class="gancho">E cadastrar proposta, como funciona?</div>
 </section>
 
@@ -2380,26 +1566,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="step r"><div class="ic-circle"><svg class="ic"><use href="#i-send"/></svg></div><div class="lbl">Envia<small>só com o seu<br>"pode enviar"</small></div></div>
   </div>
   <div class="cue r">Você ensina uma vez. <b>Nas próximas, é uma frase.</b></div>
-  <div class="gancho">E tem uma regra que todo sistema devia ter.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s123" data-section="Agente do Supervisor" data-title="Só em pendência">
-  <div class="glow g-tl"></div>
-  <div class="frame l-stmt center">
-    <div class="h-l r">Só em pendência.</div>
-    <div class="h-l teal r">Senão, silêncio.</div>
-    <p class="sub r">Pendência nova? Aviso pronto. A mesma de ontem? <b>Não repete.</b></p>
-  </div>
-  <div class="gancho">E tudo isso chega numa mensagem só.</div>
-</section>
-
-<section class="slide" data-fundo="cena:e6" data-section="Agente do Supervisor" data-tag="A rotina das 7h" data-title="A mensagem das 7h">
-  <div class="glow g-br"></div>
-  <div class="frame l-number">
-    <div class="num r">7h</div>
-    <div class="num-label r">Uma mensagem só.<small>As "pendências que dependem de você". Pula fim de semana.</small></div>
-  </div>
-  <div class="gancho">Ela chega assim:</div>
+  <div class="gancho">E tudo chega numa mensagem só, às 7.</div>
 </section>
 
 <section class="slide" data-section="Agente do Supervisor" data-tag="Exemplo" data-title="Conversa: a mensagem das 7h">
@@ -2420,57 +1587,9 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       </div>
     </div>
   </div>
-  <div class="gancho">Sete da manhã. Lembra alguém?</div>
-</section>
-
-<section class="slide" data-section="Agente do Supervisor" data-title="Às 7, com a resposta">
-  <div class="frame l-wall">
-    <div class="wall-arrow r pop"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="txt">
-      <div class="h-l r">Ele manda às 7.</div>
-      <div class="h-l teal r">Já com a resposta.</div>
-      <p class="sub r">Dr. Edson começava às 7. <b>O supervisor também, com a ronda já feita.</b></p>
-    </div>
-  </div>
-  <div class="gancho">E quando o portal pede captcha?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s125" data-section="Agente do Supervisor" data-tag="Confiança" data-title="Captcha: não burla">
-  <div class="glow g-tr"></div>
-  <div class="frame l-stmt">
-    <div class="kicker r">Captcha no portal?</div>
-    <div class="h-xl r">Não burla.</div>
-    <p class="sub r">Marca "não verificado" e te avisa no relatório. <b>Senha, ele nunca vê.</b></p>
-  </div>
-  <div class="gancho">E mais uma para o supervisor: o painel da equipe.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s126" data-section="O painel da equipe" data-tag="Para o supervisor" data-title="Ranking dos Campeões">
-  <div class="glow g-tl"></div>
-  <div class="frame l-split">
-    <div class="txt">
-      <div class="kicker r">Supervisor</div>
-      <div class="h-l r">Ranking dos</div>
-      <div class="h-l teal r">Campeões.</div>
-      <p class="sub r">Painel da equipe: quem vendeu quanto no mês e <b>quem precisa de apoio</b>.</p>
-    </div>
-    <div class="vis r"><figure class="shot tall"><img src="assets/ranking-da-equipe-escuro.png" alt="Ranking dos Campeões"></figure></div>
-  </div>
-  <div class="gancho">E ranking, neste auditório, tem beijo.</div>
-</section>
-
-<section class="slide" data-section="O painel da equipe" data-title="O beijo é com vocês">
-  <div class="frame l-wall">
-    <div class="wall-arrow r pop"><svg class="ic"><use href="#i-arrow"/></svg></div>
-    <div class="txt">
-      <div class="h-l r">O painel mede.</div>
-      <div class="h-l teal r">O beijo continua</div>
-      <div class="h-l teal r">com vocês.</div>
-      <p class="sub r">Reconhecimento continua sendo trabalho de supervisor. <b>Não de painel.</b></p>
-    </div>
-  </div>
   <div class="gancho">Agora, a parte que deixa tudo no automático.</div>
 </section>
+
 
 <!-- ===== 08-cap8-automatico.html ===== -->
 <section class="slide" data-fundo="cena:c8" data-tag="Capítulo 8 de 9" data-station="8/9" data-title="Capítulo 8 — No automático">
@@ -2526,17 +1645,6 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
   <div class="gancho">Agora, a porta da frente dos seus apps.</div>
 </section>
 
-<section class="slide" data-fundo="cena:s137" data-tag="Capítulo 8 · No automático" data-title="7 — Conectores">
-  <div class="glow g-br"></div>
-  <div class="frame l-act">
-    <div class="act-n r">Capítulo 8 · No automático</div>
-    <h2 class="act-t r">Conectores:<br><span class="teal">a porta da frente</span></h2>
-    <div class="act-bar"></div>
-    <p class="sub r">Ele ligado direto aos apps que você já usa.</p>
-  </div>
-  <div class="gancho">O que é um conector?</div>
-</section>
-
 <section class="slide" data-fundo="cena:s138" data-section="Conectores" data-tag="O que é" data-title="Conector: a porta da frente">
   <div class="glow g-tl"></div>
   <div class="frame l-split rev">
@@ -2548,32 +1656,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-link"/></svg></div></div>
   </div>
   <div class="cue r">O navegador entra pela janela. <b>O conector entra pela porta.</b></div>
-  <div class="gancho">Que porta? A dos apps que vocês já usam.</div>
-</section>
-
-<section class="slide" data-section="Conectores" data-tag="Exemplos" data-title="Os apps que você já usa">
-  <div class="frame l-mosaic" style="--cols:3;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr auto;gap:22px">
-    <div class="tile r"><svg class="ic"><use href="#i-mail"/></svg>Gmail · lê o e-mail da operadora</div>
-    <div class="tile r"><svg class="ic"><use href="#i-calendar"/></svg>Agenda · marca o retorno</div>
-    <div class="tile r"><svg class="ic"><use href="#i-folder"/></svg>Drive · acha a tabela vigente</div>
-    <div class="tile r"><svg class="ic"><use href="#i-file"/></svg>Outlook e OneDrive</div>
-    <div class="tile r"><svg class="ic"><use href="#i-image"/></svg>Canva · arte no seu modelo</div>
-    <div class="tile hi r"><svg class="ic"><use href="#i-layers"/></svg>E muitos outros</div>
-    <p class="sub r" style="grid-column:1/-1;margin:4px 0 0">Cada um ligado <b>uma vez, com o seu login</b>.</p>
-  </div>
-  <div class="cue r">E-mail, agenda, nuvem, arte. <b>Liga uma vez e ele usa quando precisar.</b></div>
   <div class="gancho">Agora: trabalho com horário.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s140" data-tag="Capítulo 8 · No automático" data-title="8 — Rotinas">
-  <div class="glow g-br"></div>
-  <div class="frame l-act">
-    <div class="act-n r">Capítulo 8 · No automático</div>
-    <h2 class="act-t r">Trabalho<br><span class="teal">com horário</span></h2>
-    <div class="act-bar"></div>
-    <p class="sub r">Rotinas: ele começa sem você pedir.</p>
-  </div>
-  <div class="gancho">O que é uma rotina?</div>
 </section>
 
 <section class="slide" data-fundo="cena:s141" data-section="Rotinas" data-tag="O que é" data-title="Ensina uma vez, ele repete no horário">
@@ -2588,29 +1671,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     </div>
     <div class="vis r pop"><div class="ic-circle lg"><svg class="ic"><use href="#i-alarm"/></svg></div></div>
   </div>
-  <div class="gancho">E dá para fazer rotina de quê?</div>
-</section>
-
-<section class="slide" data-section="Rotinas" data-tag="Exemplos" data-title="Vira rotina">
-  <div class="frame l-cards">
-    <div class="card hi r"><div class="c-top">Todo dia útil</div><div class="c-big">7h</div><div class="c-sub">pendências da equipe · supervisor</div></div>
-    <div class="card r"><div class="c-top">Todo dia útil</div><div class="c-big">8h</div><div class="c-sub">retornos de hoje e quem sumiu</div></div>
-    <div class="card r"><div class="c-top">Segunda</div><div class="c-big">9h</div><div class="c-sub">ranking da semana no painel</div></div>
-    <div class="card r"><div class="c-top">Sexta</div><div class="c-big">17h</div><div class="c-sub">propostas paradas da semana</div></div>
-  </div>
-  <div class="cue r">O que você faz todo dia no mesmo horário <b>vira rotina</b>.</div>
   <div class="gancho">E se você estiver longe do computador?</div>
-</section>
-
-<section class="slide" data-fundo="cena:s143" data-tag="Capítulo 8 · No automático" data-title="9 — Controle pelo celular">
-  <div class="glow g-br"></div>
-  <div class="frame l-act">
-    <div class="act-n r">Capítulo 8 · No automático</div>
-    <h2 class="act-t r">Tudo isso<br><span class="teal">pelo celular</span></h2>
-    <div class="act-bar"></div>
-    <p class="sub r">Longe do computador, ele continua trabalhando.</p>
-  </div>
-  <div class="gancho">Como assim?</div>
 </section>
 
 <section class="slide" data-fundo="cena:e10" data-section="Pelo celular" data-tag="O que é" data-title="Do celular, você manda">
@@ -2654,25 +1715,7 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="num r">3</div>
     <div class="num-label r">likes em dancinha<small>Ontem à noite. O algoritmo anotou.</small></div>
   </div>
-  <div class="gancho">Eu escrevi sobre isso no livro.</div>
-</section>
-
-<section class="slide plain" data-fundo="cena:s151" data-section="Treine o algoritmo" data-title="O que faz você ficar">
-  <div class="frame l-quote">
-    <p class="q r">O algoritmo não mostra o mundo. Mostra o que faz você <em>ficar</em>.</p>
-    <div class="who r">Desinstale seu Instagram · capítulo 6</div>
-    <p class="sub r">Se ele te mostra fofoca e futebol, <b>não sobra espaço para IA</b>.</p>
-  </div>
-  <div class="gancho">E tem uma notícia ruim.</div>
-</section>
-
-<section class="slide plain" data-fundo="cena:s155" data-section="Treine o algoritmo" data-title="Ninguém muda por você">
-  <div class="frame l-stmt center">
-    <div class="h-xl r">Ninguém muda</div>
-    <div class="h-xl teal r">por você.</div>
-    <p class="sub r">Nem eu. Nem a United. <b>Nem o Claude.</b></p>
-  </div>
-  <div class="gancho">Treinar o algoritmo, em vez de ser treinado.</div>
+  <div class="gancho">Então treine o algoritmo, em vez de ser treinado.</div>
 </section>
 
 <section class="slide" data-section="Treine o algoritmo" data-tag="Livro · cap. 12" data-title="Três ações">
@@ -2722,22 +1765,9 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="kicker r">Só um aviso</div>
     <div class="h-l r" style="font-size:96px">Quem responde lá</div>
     <div class="h-xl teal r pop" style="font-size:136px">é um agente.</div>
-    <p class="sub r">Resposta minha, de gente, lá não vem. <b>Lembram? Mudei quem abre o aplicativo.</b></p>
+    <p class="sub r">Resposta minha, de gente, lá não vem. <b>Ele posta, ele responde. Eu fico com o tempo.</b></p>
   </div>
-  <div class="gancho">E o porquê disso está num livro.</div>
-</section>
-
-<section class="slide" data-section="Fechamento" data-title="O livro, grátis">
-  <div class="glow g-tr"></div>
-  <div class="frame l-split rev">
-    <div class="txt">
-      <div class="kicker r">Por que quem abre o meu Instagram é um agente</div>
-      <div class="h-xl r">Grátis.</div>
-      <p class="sub r">Sem cadastro: <b>é só baixar</b>.</p>
-    </div>
-    <div class="vis r"><img src="assets/livro-capa.png" alt="Capa do livro Desinstale seu Instagram" style="height:528px;border-radius:14px;box-shadow:0 30px 80px #000"></div>
-  </div>
-  <div class="gancho">E não é só o livro. Anota este endereço.</div>
+  <div class="gancho">E tudo de hoje está num endereço só.</div>
 </section>
 
 <section class="slide" data-section="Fechamento" data-tag="Anota" data-title="vinicius.faustinoni.com/palestraunited">
@@ -2767,18 +1797,18 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <img class="r" src="assets/pagina-celular-topo.png" alt="A página no celular" style="height:528px;border-radius:22px;border:1.5px solid var(--line);box-shadow:0 30px 80px #000">
     </div>
   </div>
-  <div class="gancho">E agora, um minuto de vendedor.</div>
+  <div class="gancho">E tem mais um presente.</div>
 </section>
 
-<section class="slide" data-section="Fechamento" data-tag="Tráfego Para Corretores 2026" data-title="Agora eu vendo">
+<section class="slide" data-section="Fechamento" data-tag="Tráfego Para Corretores 2026" data-title="Mais um presente: o treinamento">
   <div class="glow g-tr"></div>
   <div class="frame l-split" style="gap:70px">
     <div class="txt">
-      <div class="h-s r" style="font-size:44px;color:var(--muted)">Como sou vendedor…</div>
-      <div class="h-m teal r" style="font-size:66px;margin-top:14px">Essa é a hora que<br>eu vendo pra vocês.</div>
+      <div class="h-s r" style="font-size:44px;color:var(--muted)">Mais um presente</div>
+      <div class="h-m teal r" style="font-size:66px;margin-top:14px">O meu treinamento,<br>de graça para vocês.</div>
       <div class="r" style="display:flex;align-items:center;gap:26px;margin-top:34px">
         <img src="assets/tpc-logo.png" alt="Tráfego Para Corretores" style="height:96px">
-        <div style="font:400 28px/1.3 var(--f-body);color:var(--muted)">O treinamento completo<br>de tráfego pago. <b style="color:var(--ink)">29 aulas. +1000 alunos.</b></div>
+        <div style="font:400 28px/1.3 var(--f-body);color:var(--muted)">O treinamento completo<br>de tráfego pago. <b style="color:var(--ink)">30 aulas. +1000 alunos.</b></div>
       </div>
     </div>
     <div class="vis r" style="display:grid;grid-template-columns:repeat(4,262px);grid-template-rows:1fr 1fr;gap:18px;height:100%;align-items:stretch;justify-items:stretch">
@@ -2792,21 +1822,8 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
       <div style="background:linear-gradient(180deg,var(--card-2),var(--card));border:1.5px solid var(--line);border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;gap:12px;min-width:0"><svg class="ic" style="font-size:44px;color:var(--teal)"><use href="#i-shield"/></svg><div style="font:800 25px/1.12 var(--f-display);letter-spacing:-.02em;color:var(--ink)">Objeções e 30 dias</div><div style="font:400 21px/1.3 var(--f-body);color:var(--muted)">a IA responde, o plano está pronto</div></div>
     </div>
   </div>
-  <div class="cue r">Meta, Google e IA, do zero. <b>7 dias de garantia: não gostou, o dinheiro volta.</b></div>
-  <div class="gancho">E quanto custa?</div>
-</section>
-
-<section class="slide" data-section="Fechamento" data-tag="Tráfego Para Corretores 2026" data-title="O preço">
-  <div class="glow g-bl"></div>
-  <div class="frame l-number" style="gap:90px">
-    <div class="r" style="display:flex;flex-direction:column;gap:10px">
-      <div class="strike" style="font:700 64px/1 var(--f-display);letter-spacing:-.03em;color:var(--muted)">De R$ 647</div>
-      <div class="num"><span>R$ 297</span></div>
-    </div>
-    <div class="num-label r">Mas vocês têm<br><span style="color:var(--teal)">cupom de desconto.</span><small>Pagamento único, sem mensalidade. 12 meses de acesso.</small></div>
-  </div>
-  <div class="cue r">Pix ou até 12x sem juros. <b>7 dias de garantia, até no parcelado.</b></div>
-  <div class="gancho">Mas vocês têm cupom.</div>
+  <div class="cue r">Meta, Google e IA, do zero. <b>Tutor de IA 24 h e certificado no final.</b></div>
+  <div class="gancho">Para entrar, um cupom.</div>
 </section>
 
 <section class="slide" data-section="Fechamento" data-tag="Só para quem está aqui" data-title="O cupom">
@@ -2815,27 +1832,18 @@ body.presenter .pv{display:grid;grid-template-columns:1fr 520px;grid-template-ro
     <div class="txt">
       <div class="kicker r">Cupom</div>
       <div class="r" style="border:3px dashed var(--teal);border-radius:28px;padding:34px 52px;width:fit-content;background:var(--teal-dim)">
-        <div style="font:700 104px/1 var(--f-mono);letter-spacing:.04em;color:var(--teal)">DESCONTO100</div>
+        <div style="font:700 88px/1 var(--f-mono);letter-spacing:.04em;color:var(--teal)">DESCONTOTOTAL</div>
       </div>
-      <p class="sub r">Em <span style="font-family:var(--f-mono);color:var(--teal)">tpc.faustinoni.com</span>, no pagamento: <b>R$ 100 de desconto.</b></p>
+      <p class="sub r">Em <span style="font-family:var(--f-mono);color:var(--teal)">tpc.faustinoni.com</span>, no pagamento: <b>o desconto é total.</b></p>
     </div>
     <div class="vis r" style="flex-direction:column;align-items:flex-start;gap:8px">
       <div class="strike" style="font:700 56px/1 var(--f-display);letter-spacing:-.03em;color:var(--muted)">R$ 297</div>
-      <div style="font:900 200px/.9 var(--f-display);letter-spacing:-.06em;color:var(--teal);white-space:nowrap">R$ 197</div>
-      <div style="font:700 44px/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink);margin-top:14px">ou 12x de R$ 16,42</div>
+      <div style="font:900 200px/.9 var(--f-display);letter-spacing:-.06em;color:var(--teal);white-space:nowrap">R$ 0</div>
+      <div style="font:700 44px/1.15 var(--f-display);letter-spacing:-.02em;color:var(--ink);margin-top:14px">o treinamento inteiro</div>
     </div>
   </div>
-  <div class="cue r">Em até 12x: <b>menos de R$ 17 por mês.</b></div>
-  <div class="gancho">Comprando ou não, falta uma coisa só.</div>
-</section>
-
-<section class="slide" data-fundo="cena:s165" data-section="Fechamento" data-title="Começar">
-  <div class="glow g-br"></div>
-  <div class="frame l-stmt">
-    <div class="h-xxl r">Começar.</div>
-    <p class="sub r">A única coisa que <b>ninguém faz por vocês</b>.</p>
-  </div>
-  <div class="gancho">Olhem para a parede uma última vez.</div>
+  <div class="cue r">Para quem está aqui hoje: <b>o treinamento sai de graça.</b></div>
+  <div class="gancho">Agora, olhem para a parede uma última vez.</div>
 </section>
 
 <section class="slide" data-section="Fechamento" data-tag="A parede" data-title="Parede: um computador e o Claude Pro">
@@ -2921,6 +1929,7 @@ let cur=0;
 let busca=0;
 slides.forEach((s,idx)=>{
   s.dataset.n=idx+1;
+  if(!s.querySelector(':scope > .num')){const c=document.createElement('div');c.className='num';c.textContent=(idx+1)+' de '+slides.length;s.appendChild(c)}
   if(s.dataset.section&&!s.querySelector('.chrome.tl')){const c=document.createElement('div');c.className='chrome tl';c.innerHTML=s.dataset.section;s.appendChild(c)}
   if(s.dataset.tag&&!s.querySelector('.chrome.tr')){const c=document.createElement('div');c.className='chrome tr';c.innerHTML=s.dataset.tag;s.appendChild(c)}
   if(s.dataset.station){const[a,b]=s.dataset.station.split('/').map(Number);const t=document.createElement('div');t.className='track';for(let k=1;k<=b;k++){const i=document.createElement('i');if(k<a)i.className='past';if(k===a)i.className='on';t.appendChild(i)}s.appendChild(t)}
